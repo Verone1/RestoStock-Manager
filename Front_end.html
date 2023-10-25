@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-
+  
   <style>
 
     
     .header {
         background-color: rgb(34, 197, 237);
-        width: 100%;
-        height: 11%;
-        position: fixed;
+        overflow: hidden;
         color: white;
-        left: 0;
+        position: relative;
+        max-width: 100%;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
+
+    .header h2:hover {
+      background-color: rgb(34, 197, 237);
+      color: rgb(0, 0, 0);
+    }
+
+    body {
+      margin: 0;
+      padding: auto;
+    }
     
+    .options a:hover {
+      background-color: rgb(34, 197, 237);
+      color: rgb(0, 0, 0);
+      padding: 20px;
+    }
     .options {
-            height: 100%;
+
+            height:100%;
             width: 20%;
-            position: fixed;
-            top:12%;
-            left: 0;
+            position: absolute;
             background-color: rgb(200, 241, 251);
             font-family: Arial, Helvetica, sans-serif;
             font-size: large;
@@ -29,12 +42,13 @@
 
         }
 
+
   </style>
   <body>
       
     <header class="header">
         <h1>Hospitality Stock System</h1>
-        
+        <h2>Home </h2>
     </header>
     
 
@@ -44,10 +58,7 @@
         <a href="#">Order Items</a><br></br><br></br>
         <a href="#">Report faulty/ missing item</a><br></br><br></br>
         <a href="#">Mailbox</a><br></br>
-      </div>
-      
-
-    </script>
+    </div>
 
   </body>
 </html>
