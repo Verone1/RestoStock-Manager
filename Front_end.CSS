@@ -1,0 +1,94 @@
+    .header {
+        background-color: rgb(34, 197, 237);
+        overflow: hidden;
+        color: white;
+        font-family: Arial;
+        align-items: center;
+        display: flex;
+    }
+
+    .header a {
+      overflow: hidden;
+      display: block;
+      padding: 20px;
+      margin:10px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      color: rgb(0, 0, 0);
+    }
+
+    .header p {
+      text-align: center;
+      font-size:xx-large;
+      display: block;
+      font-weight: bold;
+      display: block;
+      margin: 0;
+      flex: auto;
+    }
+
+    .icon{
+      overflow: hidden;
+      display: block; 
+      margin-right: 52px;
+    }
+
+    .icon-button{
+      background-color: rgb(75, 231, 200);
+      border: white;
+      padding: 10px;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
+      overflow: hidden;
+      display: block; 
+      position: static;
+    } 
+
+    .icon-list{
+      display:none;
+      position: absolute;
+      background-color: rgb(200, 241, 251);
+      padding: 15px;
+      color: black;
+    }
+
+    .icon-list:hover{
+      background-color: rgb(10, 175, 216);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .icon:hover .icon-list {display: block;}
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .options {
+      height:100%;
+      width: 20%;
+      position: absolute;
+      background-color: rgb(200, 241, 251);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+      color: black;
+      text-align: center;      
+      text-decoration: none;
+    }
+
+    .options a {
+      color: black;
+      padding: 15% ;
+      text-decoration: none;
+      display: block;
+    }
+
+    .options a:hover {
+      background-color: rgb(75, 231, 200);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
