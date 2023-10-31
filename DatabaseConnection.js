@@ -10,7 +10,7 @@ const databaseConnection = new postGradeInstance(
         host: 'penguin.kent.ac.uk',
         user: 'sw714',
         userPassword: 'oub0ind',
-        database: 'your_database_name'
+        database: 'sw714'
 });
 
 /*
