@@ -7,9 +7,9 @@ We enter our databases detail user, password etc to conenct
  */
 const databaseConnection = new postGradeInstance(
     {
-        host: 'localhost',
-        user: 'your_mysql_password',
-        userPassword: 'your_mysql_password',
+        host: 'penguin.kent.ac.uk',
+        user: 'sw714',
+        userPassword: 'oub0ind',
         database: 'your_database_name'
 });
 
