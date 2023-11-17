@@ -1,6 +1,4 @@
-.catalog-page {
-    text-align: center;
-  }
+
   
   .inventory-container {
     display: flex;
@@ -28,4 +26,21 @@
     margin: 5px;
     cursor: pointer;
   }
-  
+  .inventory-item img {
+    width: 200px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+  }
+  .inventory-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  /* Catalog content styles */
+.catalog-page {
+  display: flex;
+}
+
+.catalog-content {
+  flex: 1;
+  padding: 20px;
+}
