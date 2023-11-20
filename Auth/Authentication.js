@@ -66,7 +66,7 @@ exports.login = async (req, res, next) =>
     // makes sure a username and password have been entered
     if(!username || !userPassword)
     {
-        return res.status(400).jason({
+        return res.status(400).json({
             success: false,
             message: "Either username or userPassword not present",
         });
