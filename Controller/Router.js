@@ -3,31 +3,59 @@
 // These functions read/write database by accessing functions in Model
 
 
-// Login Demo
-
-const express = require("express");
-const router = express.Router();
+// Demo
 
 
+const app = require("express");
+const PORT = 3000; // Define the port
 
+// Start the server
+app.listen(PORT, function() {
+    console.log('Server connected to port ' + PORT);
+});
+
+// Router setup
+const router = app.Router();
 router.route("/registration").post(registration);
 router.route("/login").post(login);
-router.route("/order").post(order);  // Create a new order
+router.route("/order").post(order); // Create a new order
+
+// Apply the router to the app
+app.use("/", router);
 
 
-func registration = ................
 
-func login = {
-    
-    Boolean result = verifyLogin(request.emp_id, request.password);
+//----------------------------------------------------------------
+
+const registration = (req, res) => {
+    //.........
+};
+
+
+
+const login = (req, res) => {
+    // verifyLogin is a function in MODEL layer
+    let result = verifyLogin(req.body.emp_id, req.body.password);
 
     if (result) {
-        // TODO: login succed, make and return the view
-        
-    }else{
-        // TODO: login failed, return the error view with http status code 400 ( request error )
-        
+        // Login succeeded, make and return the view
+        res.send("Login successful.");
+    } else {
+        // Login failed, return the error view with HTTP status code 400 (Bad Request)
+        res.status(400).send("Login failed.");
     }
-}
+};
 
-func createOrder = ...
+
+const createOrder = (req, res) => {
+    let result = createOrder(req.order);
+    if (result) {
+        // order creation succeeded, make and return the view
+        res.send("order creation successful.");
+    } else {
+        // order creation failed, return the error view with HTTP status code 400 (Bad Request)
+        res.status(400).send("order creation failed.");
+    }
+};
+
+

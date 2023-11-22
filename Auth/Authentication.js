@@ -8,7 +8,7 @@ exports.registration = async (req, res, next) =>
     const { username, userPassword } = req.body;
 
     // makes sure the password is greater then 8
-    if(userpassword.length < 8)
+    if(userPassword.length < 8)
     {
         return res.status(400).json({message: "User password must be minimum 8 characters long"});
     }
@@ -66,7 +66,7 @@ exports.login = async (req, res, next) =>
     // makes sure a username and password have been entered
     if(!username || !userPassword)
     {
-        return res.status(400).jason({
+        return res.status(400).json({
             success: false,
             message: "Either username or userPassword not present",
         });

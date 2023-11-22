@@ -1,18 +1,29 @@
 // this is the layer of Business Logic ( accessing database ), the functions below will be called only by funcs in Controller
+// demo
+
+const db = require('./db');
+
+const createOrder = (order) => {
+    let insert = "INSERT INTO Orders VALUES (?, ?, ...)";   // Replace with your actual SQL insert statement and columns
+    let values = [order.column1, order.column2, ...];       // Replace with values from the 'order' object
+
+    db.query(insert, values, (error, results) => {
+        if (error) {
+            console.error('Insertion failed', error);
+            return false;
+        } else {
+            console.log('Insertion succeeded', results);
+            return true;
+        }
+    });
+};
 
 
-
-// demo of creating an Order
-
-func createOrder(Order order){
-    return SQL.execute("insert into Order where .....);
+const updateOrder = (order) => {
+    // ................
 }
 
-func updateOrder(Order order){
-    return SQL.execute("update Order where .....);
-}
-
-func verifyLogin(int emp_id, string password){
+const verifyLogin = (emp_id, password) => {
     
     result = SQL.execute("SELECT password FROM employees WHERE emp_id = ?", emp_id");
     
