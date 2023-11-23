@@ -1,7 +1,7 @@
 // src/components/InventoryPage.js
 
 import React from 'react';
-import 'css file';
+import 'Front_end.css';
 
 const InventoryPage = () => {
   const [products, setProducts] = useState([]);
@@ -10,7 +10,7 @@ const InventoryPage = () => {
     fetch('postgres db @ismail>')
       .then(response => response.json())
       .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => console.error('error:', error));
   }, []);
 
   return (
@@ -22,7 +22,6 @@ const InventoryPage = () => {
             <th>Product ID</th>
             <th>Name</th>
             <th>Price</th>
-            {/* Add more columns as needed */}
           </tr>
         </thead>
         <tbody>
