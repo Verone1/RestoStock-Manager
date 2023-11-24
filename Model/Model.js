@@ -1,4 +1,4 @@
-// this is the layer of Business Logic ( accessing database ), the functions below will be called only by funcs in Controller
+// this is the layer of accessing database , the functions below will be called only by funcs in Controller
 // demo
 
 const db = require('./db');
