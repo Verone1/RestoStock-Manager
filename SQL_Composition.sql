@@ -1,5 +1,5 @@
 DROP TABLE Orders CASCADE;
-DROP TABLE Inventories CASCADE;
+DROP TABLE Inventory_items CASCADE;
 DROP TABLE Products CASCADE;
 DROP TABLE Employees CASCADE;
 DROP TABLE Restaurants_And_HO CASCADE;
@@ -63,7 +63,7 @@ CREATE TABLE Products (
 );
 
 
-CREATE TABLE Inventories(
+CREATE TABLE Inventory_items(
     org_id INT REFERENCES Restaurants_And_HO(org_id),
     pid    INT REFERENCES Products(pid),
     quantity INT NOT NULL,
@@ -118,7 +118,7 @@ VALUES
 
 
 
-INSERT INTO Inventories (org_id, pid, quantity) 
+INSERT INTO Inventory_items (org_id, pid, quantity) 
 VALUES 
 (1, 1, 100),
 (1, 4, 100),
