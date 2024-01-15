@@ -1,0 +1,183 @@
+<style>
+
+    /* Styling of body section set so that it fills up the whole screen*/
+    body {
+          margin: 0;
+          padding: 0;
+        }
+
+    /* This is the style of the actual header */
+    .header {
+        background-color: rgb(34, 197, 237);  /* colour of background*/
+        color: white; /* colour of text*/
+        padding: 1.5%; /* padding added to make the header not look so thin*/
+        font-family: Arial;  /* font of text*/      
+        align-items: center; /*makes sure that all items are aligned inside the header */
+        display: flex; /* This controls the positioning of elements and ensures that it is kept aligned*/
+    }
+
+    /* This is the CSS for the home button on the header */
+    .header a {
+      margin:10px; /* This is included to make sure that it is not stuck to the left*/
+      font-weight: bold; /* Makes the text bold*/
+    }
+
+    /* The styling of the home button when it is being hovered upon */
+    .header a:hover {
+      color: rgb(0, 0, 0); /*changes text colour to black*/
+    }
+
+    /* This is the CSS for the text on the header */
+    .header p {
+      text-align: center; /* makes sure that this is centered in the middle of the header*/
+      font-size:xx-large; /* size of text*/
+      font-weight: bold; /* Makes the text bold*/
+      margin: 0; /* Sets the margin area to 0*/
+      flex: auto; /* this is set on this element as this is inbetween the other two elements ensuring that they are spaced out evenly*/
+    }
+
+    /* Styling for the button on the right of the header */
+    .icon{
+      margin-right: 52px; /* set accordingly so that the sign out text can fit*/
+    }
+
+    /* Styling of the actual icon button prior to it being hovered*/
+    .icon-button{
+      background-color: rgb(75, 231, 200); /* colour of background*/
+      border: white; /* colour of border*/
+      padding: 15px; /* padding size set to fit text but not look too big either*/
+      border-radius: 50%; /* provides curved box effect*/
+      color: white; /* colour of text*/
+      font-weight: bold; /* makes text go bold*/
+    } 
+
+    /* Styling of options coming out of icon button */
+    .icon-list{
+      display:none; /* ensures this stays hidden unless told otherwise*/
+      position: absolute; /* makes sure that the header doesn't change and this pops up without affecting any other positioning*/
+      background-color: rgb(200, 241, 251); /* colour of background*/
+      padding: 15px; /* sets the size of the box*/
+      color: black; /* colour of text*/
+    }
+
+    /* Styling of options coming out of icon button when it is being hovered upon */
+    .icon-list:hover{
+      background-color: rgb(10, 175, 216); /* new colour of background*/
+      color: rgb(255, 255, 255); /* new colour of text*/
+      text-decoration: none; /* This removes any hyperlinks or anything else*/
+    }
+
+    /* When the icon button is hovered upon then show the options */
+    .icon:hover .icon-list {display: block;}
+
+    .container {
+      display: flex;
+    }
+
+    /* Styling of side panel */
+    .options {
+      height:100vh; /*sets the height of the navigation bar to full height*/
+      width: 20%; /* sets the width of the navigation bar to 20%*/
+
+      position: absolute; /* without this positioning set the navigation bar does not extend to full height*/
+      background-color: rgb(200, 241, 251); /* colour of background*/
+      font-family: Arial; /* font of text*/
+      font-size: large; /* size of text*/
+      color: black; /* colour of text*/
+      text-align: center; /* centers the text*/     
+    }
+
+    /* Styling of the actual option buttons */
+    .options a {
+      color: black; /* colour of text*/
+      padding: 15% ; /* size of each section*/
+      text-decoration: none; /* removes any hyperlinks on the text*/
+      display: block; /*boxes each section*/
+    }
+
+    /* When options are being hovered on styling */
+    .options a:hover {
+      background-color: rgb(75, 231, 200); /* new colour of background*/
+      color: rgb(255, 255, 255); /* new colour of text*/
+    }
+
+    /* */
+    .requests{
+      /*width: 40%; /* sets the width of the navigation bar to 20%*/
+      height: 100vh;
+      width: 35%;
+      padding: 0% 0% 0% 20%;
+      background-color: rgb(228,248,253); /* colour of background*/
+      font-family: Arial; /* font of text*/
+      font-size: large; /* size of text*/
+      color: black; /* colour of text*/
+      
+
+
+    }
+
+    .requests div{
+      width: 100%;
+      text-align: center;
+      background-color: rgb(242,242,242);
+      font-weight: bold;
+      color: black; /* colour of text*/
+      padding: 7% 0% ; /* size of each section*/
+      text-decoration: none; /* removes any hyperlinks on the text*/
+      display: block; /*boxes each section*/
+    }
+
+    .requests a{
+      width: 100%;
+      text-align: center;
+      background-color: rgb(217,217,217);
+      color: black; /* colour of text*/
+      padding: 5% 0% ; /* size of each section*/
+      text-decoration: none; /* removes any hyperlinks on the text*/
+      display: block; /*boxes each section*/
+    }
+    
+    .requests a:hover {
+      background-color: rgb(127, 127, 127); /* new colour of background*/
+      color: rgb(255, 255, 255); /* new colour of text*/
+    }
+
+    .description{
+      /*width: 40%; /* sets the width of the navigation bar to 20%*/
+      height: 95vh;
+      width: 45%;
+      padding-top: 5vh;
+      padding-left: 5%;
+      background-color: rgb(243, 252, 216); /* colour of background*/
+      font-family: Arial; /* font of text*/
+      font-size: large; /* size of text*/
+      color: black; /* colour of text*/
+      text-align: left; /* centers the text*/   
+    }
+
+    .approve{
+      background-color: rgb(1, 163, 51); /* colour of background*/
+      border: white; /* colour of border*/
+      padding: 15px; /* padding size set to fit text but not look too big either*/
+      border-radius: 20%; /* provides curved box effect*/
+      color: white; /* colour of text*/
+      font-weight: bold;
+    }
+    .approve:hover{
+      color: black;
+    }
+  
+    .reject{
+      background-color: red; /* colour of background*/
+      border: white; /* colour of border*/
+      padding: 15px; /* padding size set to fit text but not look too big either*/
+      border-radius: 20%; /* provides curved box effect*/
+      color: white; /* colour of text*/
+      font-weight: bold;
+    }
+    .reject:hover{
+      color: black;
+    }
+
+ 
+  </style>
