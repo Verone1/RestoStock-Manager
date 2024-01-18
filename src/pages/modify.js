@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 
 
-// Abel's code to render for the Catalog page
 const Modify = () => {
   return (
     <>  
