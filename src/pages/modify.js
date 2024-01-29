@@ -4,22 +4,40 @@ import { Link } from "react-router-dom";
 
 
 const Modify = () => {
+
+  // code inspired from a tutorial on marketsplash to build a search bar
+  const [contact, setContact] = useState('');
+
+  function perform(event) {
+    event.preventDefault();
+    console.log(contact);
+  }
+
+  const data = ['Holborn', 'London'];
+
+  const caseSensitiveSearch = data.filter(item => 
+    item.toLowerCase().includes(contact.toLowerCase()));
+
+  
+
+  
+
   return (
     <>  
+
+        
         <div className="requests">
           <div>
-            <input type="text" id="search" placeholder="Search.." />
+          <form onChange={perform}>
+            <input type="text" value={contact} id="search" placeholder="Search.." onChange={(e) => setContact(e.target.value)}/>
+          </form>  
+            
           </div>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
-          <a>Restaurant London Holborn<br />19/11/2024 4:38pm</a>
+          <ul>
+            {caseSensitiveSearch.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
 
         <div className="description">
