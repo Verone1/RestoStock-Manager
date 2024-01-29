@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'; //imports this file from the directory which is providing the CSS
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 // The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
@@ -23,10 +24,10 @@ function Header() {
 function Option() {
   return (
     <div id="leftPane" className="options">
-      <a href="#">View Inventory</a>
-      <a href="order">Order Items </a>
-      <a href="#">Report faulty/ missing item</a>
-      <a href="#">Mailbox</a>
+      <Link to="/pages/view-inventory">View Inventory</Link>
+      <Link to="/pages/order">Order Items</Link>
+      <Link to="/pages/report">Report faulty/missing item</Link>
+      <Link to="/pages/mailbox">Mailbox</Link>
     </div>
   );
 }
@@ -63,17 +64,18 @@ export default Messages;
 // All functions saved under the APP function
 function App() {
   return (
-    <div>
-      <Header/>
-      <Option />
-      <Messages/>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Option />
+        <Route path="/pages/view-inventory" component={ViewInventory} />
+        <Route path="/pages/order" component={catalogue} />
+        <Route path="/pages/report" component={Report} />
+        <Route path="/pages/mailbox" component={Mailbox} />
+      </div>
+    </Router>
   );
 }
-
-
-
-
 
 // Below code renders all functions stored under App()
 ReactDOM.render(<App />, document.getElementById('root')); 
