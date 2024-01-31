@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      <a href="/">Home</a>
-      <p>Hospitality Stock System</p>
+      <a></a>
+      <p>RestoStock Manager</p>
       <div className= "icon">
         <button className="icon-button">VT</button>
         <div className="icon-list">
