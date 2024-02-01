@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'; //imports this file from the directory which is providing the CSS
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+
 
 
 // The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
@@ -25,10 +24,10 @@ function Header() {
 function Option() {
   return (
     <div id="leftPane" className="options">
-      <Link to="/pages/view-inventory">View Inventory</Link>
-      <Link to="/pages/order">Order Items</Link>
-      <Link to="/pages/report">Report faulty/missing item</Link>
-      <Link to="/pages/mailbox" className="selected_tab" >Mailbox</Link>
+      <a href="#">View Inventory</a>
+      <a href="order">Order Items </a>
+      <a href="#">Report faulty/ missing item</a>
+      <a href="#">Mailbox</a>
     </div>
   );
 }
@@ -43,30 +42,30 @@ function Messages() {
   const contacts = ['Restaurant London Holborn', 'Verone'];
 
   return (
-    <>
-    <div className="requests">
-        <div>Messages</div>
-        {contacts.map((button, index) => (
-          <button key={index} onClick={() => optionClick(button)}>
-            {button}
-          </button>
-        ))}
-    </div>
+    <div className="container">
+      <div className="contact">
+          <div>Messages</div>
+          {contacts.map((button, index) => (
+            <button key={index} onClick={() => optionClick(button)}>
+              {button}
+            </button>
+          ))}
+      </div>
 
-    <div className="description">
-        {optionStatus && (
-        <div>
-          //db code to be added 
-        </div>
-      )}
-    </div>
+      <div className="messages">
+          {optionStatus && (
+          <div>
+            //db code to be added 
+          </div>
+        )}
+      </div>
 
-    <div className="textcontainer">
-        <input type="text" id="textBox" placeholder="Enter message here..." />
-        <input id="approve" type="submit" value="Send" />
-        <br />
+      <div className="textcontainer">
+          <input type="text" id="textBox" placeholder="Enter message here..." />
+          <input id="send" type="submit" value="Send" />
+          <br />
+      </div>
     </div>
-    </>
 
   );
 };    
@@ -80,18 +79,21 @@ export default Messages;
 // All functions saved under the APP function
 function App() {
   return (
-    <Router>
+    
       <div>
         <Header />
         <Option />
-        <Route path="/pages/view-inventory" component={ViewInventory} />
-        <Route path="/pages/catalogue" component={catalogue} />
-        <Route path="/pages/report" component={Report} />
-        <Route path="/pages/mailbox" component={Mailbox} />
+        <Messages />
       </div>
-    </Router>
   );
 }
+
+// Below code renders all functions stored under App()
+ReactDOM.render(<App />, document.getElementById('root')); 
+
+
+
+
 
 // Below code renders all functions stored under App()
 ReactDOM.render(<App />, document.getElementById('root')); 
