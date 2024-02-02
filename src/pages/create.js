@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from "react-router-dom";
+import './index.css';
 
+const Header = () => {
+  return (
+    <header className="header">
+      <p>RestoStock Manager</p>
+      <div className= "icon">
+        <button className="icon-button">VT</button>
+        <div className="icon-list">
+          <div href="#">Sign out</div>
+        </div>
+      </div>
+    </header>
+  );
+}
 
-// Abel's code to render for the Catalog page
+function Option() {
+  return (
+    <div id="leftPane" className="options">
+      <a href="#">View Inventory</a>
+      <a href="#">Order Items </a>
+      <a href="#">Report faulty/ missing item</a>
+      <a href="#">Mailbox</a>
+    </div>
+  );
+}
+
 const Create = () => {
   return (
-    <div className="requests">
+    <div className="creation">
           <div className="description">
             <div>
               <a>*</a>
@@ -37,9 +60,25 @@ const Create = () => {
                 <input id="fields" type="checkbox" />checkbox 8<br />
               </div>
             </div>
+            <div>
+              <input id="save" type="submit" value="Save" />
+            </div>
           </div>
         </div>
   );
 };
 
 export default Create;
+
+function App() {
+  return (
+    
+      <div>
+        <Header />
+        <Option />
+        <Create />
+      </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root')); 
