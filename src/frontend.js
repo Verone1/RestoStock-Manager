@@ -1,18 +1,18 @@
 import React from 'react';
 import './index.css'; //imports this file from the directory which is providing the CSS
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.png';
 
 
 // The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
-function Header() {
+const Header = () => {
   return (
     <header className="header">
-      <a></a>
-      <p>RestoStock Manager</p>
+      <img src={logo}></img>
       <div className= "icon">
         <button className="icon-button">VT</button>
         <div className="icon-list">
-          <div href="#">Sign out</div>
+          <div href="#">logout</div>
         </div>
       </div>
     </header>
