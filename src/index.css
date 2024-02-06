@@ -125,6 +125,13 @@ text-decoration: none; /* This removes any hyperlinks or anything else*/
       
     }
 
+    #selected{
+      background-color: #1e8071; /* new colour of background*/
+      color: rgb(255, 255, 255);
+    }
+
+
+
     /* When options are being hovered on styling */
     .options a:hover {
       background-color: #35D0BA; /* new colour of background*/
