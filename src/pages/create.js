@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header className="header">
-      <p>RestoStock Manager</p>
+      <img src={logo}></img>
       <div className= "icon">
         <button className="icon-button">VT</button>
         <div className="icon-list">
-          <div href="#">Sign out</div>
+          <div href="#">logout</div>
         </div>
       </div>
     </header>
@@ -20,7 +21,7 @@ function Option() {
   return (
     <div id="leftPane" className="options">
       <a href="#">View Inventory</a>
-      <a href="#">Order Items </a>
+      <a id="selected" href="#">Create Restaurant </a>
       <a href="#">Report faulty/ missing item</a>
       <a href="#">Mailbox</a>
     </div>
@@ -39,26 +40,19 @@ const Create = () => {
             <div>
               <a>*</a>
               <label>Phone Number:</label>
-              <input type="text" id="fields" placeholder="Enter Name" /><br />
+              <input type="text" id="fields" placeholder="Enter Number" /><br />
             </div>
             <div>
               <a>*</a>
-              <label>Budget:</label>
-              <input data-type="currency" id="fields" placeholder="Enter Name" /><br />
+              <label>Address:</label>
+              <input data-type="currency" id="fields" placeholder="Enter Address" /><br />
             </div>
             <div>
               <a>*</a>
-              <label>Restaurants:</label>
-              <div id="restaurants">
-                <input id="fields" type="checkbox" />checkbox 1<br />
-                <input id="fields" type="checkbox" />checkbox 2<br />
-                <input id="fields" type="checkbox" />checkbox 3<br />
-                <input id="fields" type="checkbox" />checkbox 4<br />
-                <input id="fields" type="checkbox" />checkbox 5<br />
-                <input id="fields" type="checkbox" />checkbox 6<br />
-                <input id="fields" type="checkbox" />checkbox 7<br />
-                <input id="fields" type="checkbox" />checkbox 8<br />
-              </div>
+              <label>Area Manager:</label>
+              <select id="fields">
+                <option>AM example</option>
+              </select>
             </div>
             <div>
               <input id="save" type="submit" value="Save" />
