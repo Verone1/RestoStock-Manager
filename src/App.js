@@ -1,17 +1,23 @@
 import { Routes, Route } from "react-router-dom";
 
+import Frontend from "./frontend"
 import Catalogue from "./pages/catalogue";
-import Frontend from "./frontend";
-import Test from "./pages/test";
+import Create from "./pages/create";
+import Message from "./pages/message"
+
 
 function App() {
   return (
     <div className="app">
       <Frontend />
       <Routes>
-        <Route path="/" element={<Catalogue/>} />
-        <Route path="/order" element={<Test/>} />
-        <Route path="*" element={<h1>'page not found'</h1>} />
+        <Route path="/" element={<Catalogue />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/message" element={<Message />} />
+        <Route
+          path="*"
+          element={<h1 className="not-found">Page Not Found</h1>}
+        />
       </Routes>
     </div>
   );
