@@ -26,11 +26,14 @@ const Header = () => {
 function Option() {
   return (
     <div id="leftPane" className="options">
-      <NavLink  to="/" className={Catalogue}>
-        Catalogue
+      <NavLink to="/" className={Catalogue}>
+        Order items
       </NavLink>
-      <NavLink id="selected" to="/create" className={Create}>
+      <NavLink to="/create" className={Create}>
         Create Restaurant
+      </NavLink>
+      <NavLink to="/createam" className={Create}>
+        Create Area Manager
       </NavLink>
       <NavLink  to="/" className={Catalogue}>
         Report faulty/ missing item
