@@ -4,6 +4,7 @@ import Frontend from "./frontend"
 import Catalogue from "./pages/catalogue";
 import Create from "./pages/create";
 import Message from "./pages/message"
+import CreateAM from "./pages/createAM";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Catalogue />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/createam" element={<CreateAM />} />
         <Route path="/message" element={<Message />} />
         <Route
           path="*"
