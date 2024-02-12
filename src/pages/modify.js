@@ -1,7 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from "react-router-dom";
 
+import React, { useState } from 'react';
+import './index.css';
 
 const Modify = () => {
 
@@ -13,27 +12,22 @@ const Modify = () => {
     console.log(contact);
   }
 
-  const data = ['Holborn', 'London'];
+  const data = ['Holborn', 'London', 'Russia'];
 
   const caseSensitiveSearch = data.filter(item => 
     item.toLowerCase().includes(contact.toLowerCase()));
 
-  
-
-  
 
   return (
-    <>  
-
-        
-        <div className="requests">
+    <div className = "container">  
+        <div className="user">
           <div>
           <form onChange={perform}>
             <input type="text" value={contact} id="search" placeholder="Search.." onChange={(e) => setContact(e.target.value)}/>
           </form>  
             
           </div>
-          <ul>
+          <ul id= "names">
             {caseSensitiveSearch.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -73,13 +67,21 @@ const Modify = () => {
         </div>
 
         <div className="textcontainer">
-          <button className="reject"> Delete Account </button>
-          <input id="approve" type="submit" value="Save" />
+          <button className="delete"> Delete Account </button>
+          <input id="save" type="submit" value="Save" />
           <br />
         </div>
 
-    </>
+    </div>
   );
 };
 
 export default Modify;
+function App() {
+  return (
+    
+      <div>
+        <Modify />
+      </div>
+  );
+}
