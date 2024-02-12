@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
+import CreateAM from './pages/createAM';
 import Message from './pages/message';
+import Modify from './pages/modify';
 
 // The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
 const Header = () => {
@@ -32,11 +34,14 @@ function Option() {
       <NavLink to="/create" className={Create}>
         Create Restaurant
       </NavLink>
-      <NavLink to="/createam" className={Create}>
+      <NavLink to="/createam" className={CreateAM}>
         Create Area Manager
       </NavLink>
       <NavLink  to="/" className={Catalogue}>
         Report faulty/ missing item
+      </NavLink>
+      <NavLink to="/modify" className={Modify}>
+        Modify User
       </NavLink>
       <NavLink to="/message" className={Message}>
         Mailbox
