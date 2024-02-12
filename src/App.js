@@ -5,7 +5,7 @@ import Catalogue from "./pages/catalogue";
 import Create from "./pages/create";
 import Message from "./pages/message"
 import CreateAM from "./pages/createAM";
-
+import Modify from "./pages/modify";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/create" element={<Create />} />
         <Route path="/createam" element={<CreateAM />} />
         <Route path="/message" element={<Message />} />
+        <Route path="/modify" element={<Modify />} />
         <Route
           path="*"
           element={<h1 className="not-found">Page Not Found</h1>}
