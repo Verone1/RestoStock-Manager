@@ -6,6 +6,7 @@ import Create from "./pages/create";
 import Message from "./pages/message"
 import CreateAM from "./pages/createAM";
 import Modify from "./pages/modify";
+import Report from "./pages/report";
 
 function App() {
   return (
