@@ -11,7 +11,7 @@ const Approval = () => {
         <div>Pending Order Requests</div>
         <a>Restaurant London Holborn<br></br>Order ##000017##</a>
       </div>
-      <div class="description">
+      <div class="order_text">
         <a><strong>Order No:</strong></a>
         <br></br>
         <a><strong>Site Name:</strong></a>
