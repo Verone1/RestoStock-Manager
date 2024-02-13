@@ -415,7 +415,9 @@ body {
   border: #B1D3FB;
   float: right;
 }
-
+/*
+CSS for the modify page
+*/
 .user {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
   height: 100vh;
@@ -452,19 +454,17 @@ body {
 
 
 
-.user ul li {
+.user ul{
   text-align: center;
   background-color: #C3F7ED;
-  color: black;
-  /* colour of text*/
-  text-decoration: none;
-  /* removes any hyperlinks on the text*/
-  display: block;
-  /*boxes each section*/
+  color: black; /* colour of text*/
+  text-decoration: none; /* removes any hyperlinks on the text*/
+  display: block; /*boxes each section*/
   list-style-type: none;
-  margin-left: -12%;
-  padding: 10%;
-  /* size of each section*/
+  padding-left: 0; /* size of each section*/
+}
+.user li{
+  padding: 10%; /* size of each section*/
 }
 
 .user ul li:hover {
@@ -473,6 +473,11 @@ body {
   color: rgb(255, 255, 255);
   /* new colour of text*/
 }
+#search {
+      width: 80%;
+      padding: 1vh;
+      border: #B1D3FB;
+    }
 
 .description {
   height: 84vh;
