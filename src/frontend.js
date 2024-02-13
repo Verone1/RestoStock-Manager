@@ -8,6 +8,7 @@ import Create from './pages/create';
 import CreateAM from './pages/createAM';
 import Message from './pages/message';
 import Modify from './pages/modify';
+import Report from './pages/report';
 
 // The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
 const Header = () => {
