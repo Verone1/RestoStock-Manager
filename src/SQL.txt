@@ -1,0 +1,47 @@
+CREATE TABLE login (
+  userID INT,
+  name VARCHAR(255),
+  password VARCHAR(255)
+);
+
+CREATE TABLE POS (
+  deviceID INT,
+  name VARCHAR(255),
+  cost VARCHAR(255),
+);
+
+CREATE TABLE user (
+  userID INT,
+  name VARCHAR(255),
+  access VARCHAR(255),
+);
+
+CREATE TABLE Restaurants (
+  userID INT,
+  name VARCHAR(255),
+  address VARCHAR(255),
+  AreaManager VARCHAR(255),
+
+);
+
+CREATE TABLE AreaManager (
+  userID INT,
+  name VARCHAR(255),
+  budget INT,
+  number INT,
+);
+
+CREATE TABLE Orders (
+  userID INT,
+  deviceID INT,
+  quantity INT,
+);
+
+CREATE TABLE Faulty (
+  userID INT,
+  deviceID INT,
+  quantity INT,
+  reason INT,
+);
+
+
