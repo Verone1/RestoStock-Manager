@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Frontend from "./frontend"
 import Catalogue from "./pages/catalogue";
@@ -8,11 +9,36 @@ import CreateAM from "./pages/createAM";
 import Modify from "./pages/modify";
 import Report from "./pages/report";
 import Approval from "./pages/approval";
+import Login from "./pages/login";
+
 
 function App() {
+
+  const [loggedIn, setLoggedInState] = useState(false);
+  const navigate = useNavigate();
+
+  const logOut = () => {
+    setLoggedInState(false);
+    navigate("/login");
+  }
+
+  const loginCreds = (username, password) => {
+    if (username === "admin" && password === "password") { // temp creds
+      setLoggedInState(true);
+      navigate("/");
+    } else {
+      alert("Invalid credentials"); 
+    }
+  };
+
+
+  if (!loggedIn) {
+    return <Login onLogin={loginCreds} />;
+  }
+
   return (
     <div className="app">
-      <Frontend />
+      <Frontend onLogout = {logOut} />
       <Routes>
         <Route path="/" element={<Catalogue />} />
         <Route path="/create" element={<Create />} />
