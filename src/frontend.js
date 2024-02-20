@@ -91,10 +91,10 @@ const Option = () => {
 
 
 // All functions saved under the APP function
-export default function App()  {
+export default function App( {onLogout} )  {
   return (
     <div>
-      <Header/>
+      <Header onLogout = {onLogout} />
       <Option />
     </div>
   );
