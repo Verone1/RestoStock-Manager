@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import '../index.css';
 
 
 const CreateAM = () => {
@@ -25,6 +24,7 @@ const CreateAM = () => {
             <a>*</a>
             <label>Restaurants:</label>
             <div id="restaurants">
+              <div id="fields">
               <input id="fields" type="checkbox"/>
               <label for="fields"> Restaurant 1</label>
               <input id="fields" type="checkbox"/>
@@ -33,6 +33,9 @@ const CreateAM = () => {
               <label for="fields"> Restaurant 1</label>
               <input id="fields" type="checkbox"/>
               <label for="fields"> Restaurant 2</label>
+              <input id="fields" type="checkbox"/>
+              <label for="fields"> Restaurant 2</label>
+              </div>
             </div>
           </div>
           <div>
@@ -44,13 +47,3 @@ const CreateAM = () => {
 
 export default CreateAM;
 
-function App() {
-  return (
-
-      <div>
-        <CreateAM />
-      </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('root')); 
