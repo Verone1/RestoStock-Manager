@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import '../index.css';
+
 
 const Create = () => {
   return (
@@ -18,7 +18,7 @@ const Create = () => {
       <div>
         <a>*</a>
         <label>Address:</label>
-        <input data-type="currency" id="fields" placeholder="Enter Address" /><br />
+        <input id="fields" placeholder="Enter Address" /><br />
       </div>
       <div>
         <a>*</a>
@@ -35,14 +35,3 @@ const Create = () => {
 };
 
 export default Create;
-
-function App() {
-  return (
-
-      <div>
-        <Create />
-      </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('root')); 
