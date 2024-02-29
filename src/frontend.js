@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'; //imports this file from the directory which is providing the CSS
+import './index.css';
 import logo from './assets/logo.png';
 import { NavLink } from "react-router-dom";
 
@@ -11,26 +11,21 @@ import Modify from './pages/modify';
 import Report from './pages/report';
 import Approval from './pages/approval';
 
-// The HTML of the Header section is saved under the below function which can be recalled so it can be rendered
 const Header = ({ onLogout }) => {
   return (
     <header className="header">
-      <img src={logo}></img>
-      <div className= "icon">
+      <img src={logo} alt="Logo"></img>
+      <div className="icon">
         <button className="icon-button">VT</button>
         <div className="icon-list">
-          <button onClick={onLogout}>Logout</button>
+        <button onClick={onLogout}>Logout</button>
         </div>
       </div>
     </header>
   );
 }
 
-// The HTML of the side options bar section is saved under the below function which can be recalled so it can be rendered
-const Option = () => {
-  // Assuming `access` is a variable accessible in this scope
-  const access = 'headoffice'; // Replace this with your actual logic
-
+const Option = ({ access }) => {
   return (
     <div id="leftPane" className="options">
       {access === 'restaurant' && (
@@ -39,10 +34,10 @@ const Option = () => {
             View Inventory
           </NavLink>
           <NavLink to="/" className={Catalogue}>
-            Order items
+            Order Items
           </NavLink>
           <NavLink to="/" className={Catalogue}>
-            Report faulty/ missing item
+            Report faulty/missing item
           </NavLink>
           <NavLink to="/message" className={Message}>
             Mailbox
@@ -68,7 +63,7 @@ const Option = () => {
       {access === 'headoffice' && (
         <>
           <NavLink to="/report" className={Report}>
-            Report page
+            Reports
           </NavLink>
           <NavLink to="/create" className={Create}>
             Create Restaurant
@@ -88,14 +83,12 @@ const Option = () => {
   );
 }
 
-
-
-// All functions saved under the APP function
-export default function App( {onLogout} )  {
+export default function App({ accessLevel, onLogout }) {
   return (
     <div>
-      <Header onLogout = {onLogout} />
-      <Option />
+      <Header onLogout={onLogout} />
+      <Option access={accessLevel} />
     </div>
   );
 }
+
