@@ -1,3 +1,62 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px 15px;
+}
+
+td {
+  padding: 10px 15px;
+  color: #666;
+  border-bottom: 1px solid #eeeeee;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+.report-selection-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.report-selection-dropdown, .generate-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.generate-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.generate-button:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+
 /* Styling of body section set so that it fills up the whole screen*/
 body {
   margin: 0;
