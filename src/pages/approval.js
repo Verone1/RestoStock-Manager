@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 
 
@@ -40,13 +39,3 @@ const Approval = () => {
 
 export default Approval;
 
-function App() {
-  return (
-
-      <div>
-        <Approval />
-      </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('root')); 
