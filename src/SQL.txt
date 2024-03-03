@@ -46,12 +46,13 @@ CREATE TABLE Faulty (
   userID INT,
   deviceID INT,
   quantity INT,
-  reason LONGTEXT
+  reason TEXT
 );
 
 CREATE TABLE Messages (
-  To INT,
-  From INT,
-  message LONGTEXT,
-  date DATETIME
+  sendto INT,
+  fromuser INT,
+  message TEXT,
+  date TIMESTAMP
 );
+
