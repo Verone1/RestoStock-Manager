@@ -16,12 +16,17 @@ CREATE TABLE user (
   access VARCHAR(255),
 );
 
+CREATE TABLE RestaurantDevices (
+  restaurantID INT,
+  deviceID INT,
+  deviceCount INT,
+);
+
 CREATE TABLE Restaurants (
   userID INT,
   name VARCHAR(255),
   address VARCHAR(255),
   AreaManager VARCHAR(255),
-
 );
 
 CREATE TABLE AreaManager (
