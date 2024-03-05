@@ -4,11 +4,11 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Frontend from "./frontend"
 import Catalogue from "./pages/catalogue";
 import Create from "./pages/create";
-import Message from "./pages/message"
-import CreateAM from "./pages/createAM";
+import Message from "./pages/Messages"
+import CreateAM from "./pages/createam";
 import Modify from "./pages/modify";
 import Report from "./pages/report";
-import Reports from "./pages/reports";
+import Reports from "./pages/ReportPage";
 import Approval from "./pages/approval";
 import Login from "./pages/login";
 

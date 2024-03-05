@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
-import CreateAM from './pages/createAM';
-import Message from './pages/message';
+import CreateAM from './pages/createam';
+import Message from './pages/Messages';
 import Modify from './pages/modify';
 import Report from './pages/report';
-import Reports from './pages/reports';
+import Reports from './pages/ReportPage';
 import Approval from './pages/approval';
 
 const Header = ({ onLogout, user }) => {
