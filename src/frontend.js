@@ -63,7 +63,7 @@ const Option = ({ access }) => {
       )}
       {access === 'headoffice' && (
         <>
-          <NavLink to="/adminReport" className={AdminReport}>
+          <NavLink to="/report" className={AdminReport}>
             Reports
           </NavLink>
           <NavLink to="/create" className={Create}>

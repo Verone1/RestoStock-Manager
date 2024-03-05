@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CSVLink } from 'react-csv';
 
 import '../index.css';
 
@@ -135,6 +136,13 @@ const ReportPage = () => {
     ));
   };
 
+  const tableHeadersForCSV = dataReport.length > 0 ? Object.keys(dataReport[0]).map(header => ({label: header, key: header})) : [];
+  const csvExtract = {
+    filename: 'Report.csv',
+    headers: tableHeadersForCSV,
+    data: dataReport
+  };
+
   return (
     <div className='report-page'>
       <div className="title-container">
@@ -152,6 +160,9 @@ const ReportPage = () => {
           <option value="Report 4">Report 4</option>
         </select>
         <button onClick={generateReport} className='generate-button'>Generate Report</button>
+        {dataReport.length > 0 && (
+          <CSVLink {...csvExtract} className='export-button'>Export to CSV</CSVLink>
+        )}
       </div>
       <div className='report-data-container'>
         {dataReport.length > 0 && (

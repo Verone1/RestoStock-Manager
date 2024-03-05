@@ -36,7 +36,7 @@ tr:hover {
   margin-top: 20px;
 }
 
-.report-selection-dropdown, .generate-button {
+.report-selection-dropdown, .generate-button, .export-button {
   padding: 8px 12px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -45,16 +45,18 @@ tr:hover {
   cursor: pointer;
 }
 
-.generate-button {
+.generate-button, .export-button {
   background-color: #007bff;
   color: #ffffff;
   border-color: #007bff;
 }
 
-.generate-button:hover {
+.generate-button:hover, .export-button:hover {
   background-color: #0056b3;
   border-color: #004085;
 }
+
+
 
 
 /* Styling of body section set so that it fills up the whole screen*/
