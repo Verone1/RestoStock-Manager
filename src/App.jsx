@@ -1,79 +1,95 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import React from 'react';
+import './index.css';
+import logo from './assets/logo.png';
+import { NavLink } from "react-router-dom";
 
-import Frontend from "./frontend"
-import Catalogue from "./pages/catalogue";
-import Create from "./pages/create";
-import Message from "./pages/message"
-import CreateAM from "./pages/createAM";
-import Modify from "./pages/modify";
-import Report from "./pages/report";
-import Approval from "./pages/approval";
-import Login from "./pages/login";
+import Catalogue from './pages/catalogue';
+import Create from './pages/create';
+import CreateAM from './pages/createAM';
+import Message from './pages/message';
+import Modify from './pages/modify';
+import Report from './pages/report';
+import Reports from './pages/reports';
+import Approval from './pages/approval';
 
-
-function App() {
-
-  const [loggedIn, setLoggedInState] = useState(false);
-  const [accessLevel, setAccessLevel] = useState(null);
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
-
-  const logOut = () => {
-    
-    setLoggedInState(false);
-    navigate("/login");
-  }
-
-  const loginCreds = (username, password) => {
-    if (username === "canterbury" && password === "password") { // temp creds
-      setLoggedInState(true);
-      setAccessLevel('restaurant');
-      setUser(username);
-      navigate("/");
-    } 
-    else if (username === "verone" && password === "password") { // temp creds
-      setLoggedInState(true);
-      setAccessLevel('am');
-      setUser(username);
-      navigate("/");
-    } 
-    else if (username === "admin" && password === "password") { // temp creds
-      setLoggedInState(true);
-      setAccessLevel('headoffice');
-      setUser(username);
-      navigate("/");
-    } else {
-      alert("Invalid credentials"); 
-    }
-  };
-
-
-  if (!loggedIn) {
-    return <Login onLogin={loginCreds} />;
-  }
-  else {
-    return (
-      <div className="app">
-        <Frontend onLogout={logOut} accessLevel={accessLevel} />
-        <Routes>
-          <Route path="/" element={<Catalogue user={user}/>} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/createam" element={<CreateAM />} />
-          <Route path="/message" element={<Message />} />
-          <Route path="/modify" element={<Modify />} />
-          <Route path="/report" element={<Report user={user}/>} />
-          <Route path="/approval" element={<Approval user={user}/>} />
-          <Route
-            path="*"
-            element={<h1 className="not-found">Page Not Found</h1>}
-          />
-        </Routes>
+const Header = ({ onLogout, user }) => {
+  return (
+    <header className="header">
+      <img src={logo} alt="Logo"></img>
+      <div className="icon">
+        <button className="icon-button">{user}</button>
+        <div className="icon-list">
+          <button onClick={onLogout}>Logout</button>
+        </div>
       </div>
-    );
-  }
-
-  
+    </header>
+  );
 }
 
-export default App;
+const Option = ({ access }) => {
+  return (
+    <div id="leftPane" className="options">
+      {access === 'restaurant' && (
+        <>
+          <NavLink to="/" className={Catalogue}>
+            View Inventory
+          </NavLink>
+          <NavLink to="/" className={Catalogue}>
+            Order Items
+          </NavLink>
+          <NavLink to="/report" className={Report}>
+            Report faulty/missing item
+          </NavLink>
+          <NavLink to="/message" className={Message}>
+            Mailbox
+          </NavLink>
+        </>
+      )}
+      {access === 'am' && (
+        <>
+          <NavLink to="/approval" className={Approval}>
+            POS request Orders
+          </NavLink>
+          <NavLink to="/reports" className={Reports}>
+            Report page
+          </NavLink>
+          <NavLink to="/report" className={Report}>
+            Budget tracker
+          </NavLink>
+          <NavLink to="/message" className={Message}>
+            Mailbox
+          </NavLink>
+        </>
+      )}
+      {access === 'headoffice' && (
+        <>
+          <NavLink to="/reports" className={Reports}>
+            Reports
+          </NavLink>
+          <NavLink to="/create" className={Create}>
+            Create Restaurant
+          </NavLink>
+          <NavLink to="/createam" className={CreateAM}>
+            Create Area Manager
+          </NavLink>
+          <NavLink to="/modify" className={Modify}>
+            Modify User
+          </NavLink>
+          <NavLink to="/message" className={Message}>
+            Mailbox
+          </NavLink>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default function App({ accessLevel, onLogout, user }) {
+  return (
+    <div>
+      <Header onLogout={onLogout} user={user}/>
+      <Option access={accessLevel} />
+    </div>
+  );
+}
+
