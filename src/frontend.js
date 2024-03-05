@@ -9,16 +9,17 @@ import CreateAM from './pages/createAM';
 import Message from './pages/message';
 import Modify from './pages/modify';
 import Report from './pages/report';
+import Reports from './pages/reports';
 import Approval from './pages/approval';
 
-const Header = ({ onLogout }) => {
+const Header = ({ onLogout, user }) => {
   return (
     <header className="header">
       <img src={logo} alt="Logo"></img>
       <div className="icon">
-        <button className="icon-button">VT</button>
+        <button className="icon-button">{user}</button>
         <div className="icon-list">
-        <button onClick={onLogout}>Logout</button>
+          <button onClick={onLogout}>Logout</button>
         </div>
       </div>
     </header>
@@ -36,7 +37,7 @@ const Option = ({ access }) => {
           <NavLink to="/" className={Catalogue}>
             Order Items
           </NavLink>
-          <NavLink to="/" className={Catalogue}>
+          <NavLink to="/report" className={Report}>
             Report faulty/missing item
           </NavLink>
           <NavLink to="/message" className={Message}>
@@ -49,7 +50,7 @@ const Option = ({ access }) => {
           <NavLink to="/approval" className={Approval}>
             POS request Orders
           </NavLink>
-          <NavLink to="/report" className={Report}>
+          <NavLink to="/reports" className={Reports}>
             Report page
           </NavLink>
           <NavLink to="/report" className={Report}>
@@ -62,7 +63,7 @@ const Option = ({ access }) => {
       )}
       {access === 'headoffice' && (
         <>
-          <NavLink to="/report" className={Report}>
+          <NavLink to="/reports" className={Reports}>
             Reports
           </NavLink>
           <NavLink to="/create" className={Create}>
@@ -83,10 +84,10 @@ const Option = ({ access }) => {
   );
 }
 
-export default function App({ accessLevel, onLogout }) {
+export default function App({ accessLevel, onLogout, user }) {
   return (
     <div>
-      <Header onLogout={onLogout} />
+      <Header onLogout={onLogout} user={user}/>
       <Option access={accessLevel} />
     </div>
   );
