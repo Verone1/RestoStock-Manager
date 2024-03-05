@@ -9,7 +9,7 @@ import CreateAM from './pages/createam';
 import Message from './pages/Messages';
 import Modify from './pages/modify';
 import Report from './pages/report';
-import Reports from './pages/reports';
+import Reports from './pages/ReportPage';
 import Approval from './pages/approval';
 
 const Header = ({ onLogout, user }) => {

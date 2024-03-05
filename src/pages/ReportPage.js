@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ReportPage.css';
+import '../index.css';
 
 const ReportPage = () => {
   const [item, setItem] = useState('');
