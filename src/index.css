@@ -368,10 +368,6 @@ body {
   padding: 20px;
 }
 
-.container {
-  display: flex;
-}
-
 /* Styling of side panel */
 .options {
   height: 100vh;
@@ -420,11 +416,6 @@ body {
   /* new colour of background*/
   color: rgb(255, 255, 255);
   /* new colour of text*/
-}
-
-/* Area which the content outside of the header and nav bar will sit in */
-.container {
-  display: flex;
 }
 
 /* side panel which will allow to select the appropriate contact for the user to message*/
@@ -873,116 +864,10 @@ body {
   justify-content: center;
 }
 
-/* */
-.requests {
-  /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 100vh;
-  width: 35%;
-  padding: 0% 0% 0% 20%;
-  background-color: rgb(228, 248, 253);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-
-
-
-}
-
-.requests div {
-  width: 100%;
-  text-align: center;
-  background-color: rgb(242, 242, 242);
-  font-weight: bold;
-  color: black;
-  /* colour of text*/
-  padding: 7% 0%;
-  /* size of each section*/
-  text-decoration: none;
-  /* removes any hyperlinks on the text*/
-  display: block;
-  /*boxes each section*/
-}
-
-.requests a {
-  width: 100%;
-  text-align: center;
-  background-color: rgb(217, 217, 217);
-  color: black;
-  /* colour of text*/
-  padding: 5% 0%;
-  /* size of each section*/
-  text-decoration: none;
-  /* removes any hyperlinks on the text*/
-  display: block;
-  /*boxes each section*/
-}
-
-.requests a:hover {
-  background-color: rgb(24, 77, 44);
-  /* new colour of background*/
-  color: rgb(255, 255, 255);
-  /* new colour of text*/
-}
-
-.order_text {
-  /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 95vh;
-  width: 45%;
-  padding-top: 5vh;
-  padding-left: 5%;
-  background-color: rgb(216, 247, 252);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-}
-
-.approve {
-  background-color: rgb(1, 163, 51);
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20%;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-}
-
-.approve:hover {
-  color: black;
-}
-
-.reject {
-  background-color: red;
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20%;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-}
-
-.reject:hover {
-  color: black;
-}
-
 /* accepted css */
+
+
+
 
 /* || ADMIN REPORT PAGE */
 
@@ -1055,5 +940,135 @@ body {
 
 /* formatting for generated data table */
 .report-data-container {
+  background-color: blue;
   /* css here */
 }
+
+
+
+
+/* || APPROVAL PAGE */
+
+/* Area which the content outside of the header and nav bar will sit in */
+.approval-page-container {
+  display: flex;
+}
+
+/* div container for header and restaurant names */
+.approval-requests-container {
+  /*width: 40%; /* sets the width of the navigation bar to 20%*/
+  height: 100vh;
+  width: 35%;
+  padding: 0% 0% 0% 20%;
+  background-color: rgb(228, 248, 253);
+  /* colour of background*/
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+}
+
+/* div class for "Pending Order Requests" */
+.approval-requests-container div {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(242, 242, 242);
+  font-weight: bold;
+  color: black;
+  /* colour of text*/
+  padding: 7% 0%;
+  /* size of each section*/
+  text-decoration: none;
+  /* removes any hyperlinks on the text*/
+  display: block;
+  /*boxes each section*/
+}
+
+/* a class for listing restaurants */
+.approval-requests-container a {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(217, 217, 217);
+  color: black;
+  /* colour of text*/
+  padding: 5% 0%;
+  /* size of each section*/
+  text-decoration: none;
+  /* removes any hyperlinks on the text*/
+  display: block;
+  /*boxes each section*/
+}
+
+/* hover for approval names */
+.approval-requests-container a:hover {
+  background-color: rgb(24, 77, 44);
+  /* new colour of background*/
+  color: rgb(255, 255, 255);
+  /* new colour of text*/
+}
+
+/* text within approval page */
+.approval-order_text {
+  /*width: 40%; /* sets the width of the navigation bar to 20%*/
+  height: 95vh;
+  width: 45%;
+  padding-top: 5vh;
+  padding-left: 5%;
+  background-color: rgb(216, 247, 252);
+  /* colour of background*/
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+}
+
+/* button to approve requests */
+.approval-approve-button {
+  background-color: rgb(1, 163, 51);
+  /* colour of background*/
+  border: white;
+  /* colour of border*/
+  padding: 15px;
+  /* padding size set to fit text but not look too big either*/
+  border-radius: 20%;
+  /* provides curved box effect*/
+  color: white;
+  /* colour of text*/
+  font-weight: bold;
+}
+
+/* hover button to approve requests */
+.approval-approve-button:hover {
+  color: black;
+}
+
+/* reject button to decline requests */
+.approval-reject-button {
+  background-color: red;
+  /* colour of background*/
+  border: white;
+  /* colour of border*/
+  padding: 15px;
+  /* padding size set to fit text but not look too big either*/
+  border-radius: 20%;
+  /* provides curved box effect*/
+  color: white;
+  /* colour of text*/
+  font-weight: bold;
+}
+
+/* reject hover button to decline requests */
+.approval-reject-button:hover {
+  color: black;
+}
+
+
+
+
+/* || */

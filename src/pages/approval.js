@@ -4,13 +4,13 @@ import '../index.css';
 
 const Approval = () => {
   return (
-    <div class="container">
+    <div class="approval-page-container">
       
-      <div class="requests">
+      <div class="approval-requests-container">
         <div>Pending Order Requests</div>
         <a>Restaurant London Holborn<br></br>Order ##000017##</a>
       </div>
-      <div class="order_text">
+      <div class="approval-order_text">
         <a><strong>Order No:</strong></a>
         <br></br>
         <a><strong>Site Name:</strong></a>
@@ -31,7 +31,7 @@ const Approval = () => {
         <br></br>
         <a><strong>Item description:</strong></a>
         <br></br>
-        <button class="approve"> Approve </button> <button class="reject">Reject</button>
+        <button class="approval-approve-button"> Approve </button> <button class="approval-reject-button">Reject</button>
       </div>
   </div>
   );
