@@ -17,7 +17,7 @@ const LoginPage = ({ onLogin }) => {
             <img src = {logo} alt = "Logo" className="login-logo"/>
             <h2 className="logintext">LOGIN</h2>
             <form onSubmit={submitButton} className='login-form'>
-                <div className='form-group'>
+                <div className='login-form-group'>
                     <label htmlFor='username'>USERNAME</label>
                     <input
                         type='text'
@@ -26,7 +26,7 @@ const LoginPage = ({ onLogin }) => {
                         onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
-                <div className='form-group'>
+                <div className='login-form-group'>
                     <label htmlFor='password'>PASSWORD</label>
                     <input
                         type='password'

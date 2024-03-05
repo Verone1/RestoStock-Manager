@@ -186,61 +186,6 @@ body {
   padding: 20px;
 }
 
-.login-container {
-  font-family: 'Trebuchet MS', sans-serif;
-  color: #FEFED5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.login-button {
-  background-color: #34D0BA;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.login-button:hover {
-  background-color: #0056b3;
-}
-
-.login-logo {
-  max-width: 1000px;
-  margin-bottom: 20px;
-}
-
-.login-page-background {
-  background-color: #016A63;
-  min-height: 100vh;
-  width: 100%;
-}
-
 /* Styling of body section set so that it fills up the whole screen*/
 body {
   margin: 0;
@@ -1048,4 +993,64 @@ body {
   padding: 1vh;
   border: #B1D3FB;
   float: right;
+}
+
+
+
+
+/* || LOGIN PAGE */
+
+.login-container {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #FEFED5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page-background {
+  background-color: #016A63;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-logo {
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.login-form-group label {
+  margin-bottom: 5px;
+}
+
+.login-form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #34D0BA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
 }
