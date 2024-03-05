@@ -2,6 +2,10 @@ import React from 'react';
 import './index.css';
 import logo from './assets/logo.png';
 import { NavLink } from "react-router-dom";
+import { HiDocumentReport } from "react-icons/hi";
+import { IoIosCreate } from "react-icons/io";
+import { MdOutlineCreate } from "react-icons/md";
+import { LuMailbox } from "react-icons/lu";
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
@@ -11,6 +15,7 @@ import Modify from './pages/modify';
 import AdminReport from './pages/adminReport';
 import DamageReport from './pages/reportDamage';
 import Approval from './pages/approval';
+
 
 const Header = ({ onLogout, user }) => {
   return (
@@ -26,7 +31,7 @@ const Header = ({ onLogout, user }) => {
   );
 }
 
-const Option = ({ access }) => {
+const Option = ({ onLogout, access }) => {
   return (
     <div id="leftPane" className="options">
       {access === 'restaurant' && (
@@ -64,18 +69,23 @@ const Option = ({ access }) => {
       {access === 'headoffice' && (
         <>
           <NavLink to="/report" className={AdminReport}>
+            <HiDocumentReport className='iconStyle' />
             Reports
           </NavLink>
           <NavLink to="/create" className={Create}>
+            <IoIosCreate className='iconStyle' />
             Create Restaurant
           </NavLink>
           <NavLink to="/createam" className={CreateAM}>
+            <IoIosCreate className='iconStyle' />
             Create Area Manager
           </NavLink>
           <NavLink to="/modify" className={Modify}>
+            <MdOutlineCreate className='iconStyle' />
             Modify User
           </NavLink>
           <NavLink to="/message" className={Message}>
+            <LuMailbox className='iconStyle' />
             Mailbox
           </NavLink>
         </>
@@ -87,7 +97,7 @@ const Option = ({ access }) => {
 export default function App({ accessLevel, onLogout, user }) {
   return (
     <div>
-      <Header onLogout={onLogout} user={user}/>
+      <Header onLogout={onLogout} user={user} />
       <Option access={accessLevel} />
     </div>
   );
