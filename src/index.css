@@ -581,13 +581,7 @@ body {
 
 }
 
-/* CSS to be used for the field to input data */
-#fields {
-  width: 60%;
-  padding: 1vh;
-  border: #B1D3FB;
-  float: right;
-}
+
 
 .user {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
@@ -734,13 +728,6 @@ body {
 
 .delete:hover {
   color: black;
-}
-
-
-#fields {
-  width: 60%;
-  padding: 1vh;
-  float: right;
 }
 
 .description a {
@@ -1053,4 +1040,12 @@ body {
 /* effect on hovering the save button */
 #areamanager-page-save-button:hover {
   color: black;
+}
+
+/* CSS to be used for the field to input data */
+#area-manager-page-fields {
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
 }

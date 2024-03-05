@@ -4,42 +4,42 @@ import '../index.css';
 
 const CreateAM = () => {
   return (
-    <div className="creation">
+    <div className="areamanager-page-container">
           <div>
             <a>*</a>
             <label>Name:</label>
-            <input type="text" id="fields" placeholder="Enter Name" /><br />
+            <input type="text" id="area-manager-page-fields" placeholder="Enter Name" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Phone Number:</label>
-            <input type="text" id="fields" placeholder="Enter Number" /><br />
+            <input type="text" id="area-manager-page-fields" placeholder="Enter Number" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Budget:</label>
-            <input data-type="currency" id="fields" placeholder="Enter Budget" /><br />
+            <input data-type="currency" id="area-manager-page-fields" placeholder="Enter Budget" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Restaurants:</label>
-            <div id="restaurants">
-              <div id="fields">
-              <input id="fields" type="checkbox"/>
-              <label for="fields"> Restaurant 1</label>
-              <input id="fields" type="checkbox"/>
-              <label for="fields"> Restaurant 2</label>
-              <input id="fields" type="checkbox"/>
-              <label for="fields"> Restaurant 1</label>
-              <input id="fields" type="checkbox"/>
-              <label for="fields"> Restaurant 2</label>
-              <input id="fields" type="checkbox"/>
-              <label for="fields"> Restaurant 2</label>
+            <div id="areamanager-page-restaurants-list">
+              <div id="area-manager-page-fields">
+              <input id="area-manager-page-fields" type="checkbox"/>
+              <label for="area-manager-page-fields"> Restaurant 1</label>
+              <input id="area-manager-page-fields" type="checkbox"/>
+              <label for="area-manager-page-fields"> Restaurant 2</label>
+              <input id="area-manager-page-fields" type="checkbox"/>
+              <label for="area-manager-page-fields"> Restaurant 1</label>
+              <input id="area-manager-page-fields" type="checkbox"/>
+              <label for="area-manager-page-fields"> Restaurant 2</label>
+              <input id="area-manager-page-fields" type="checkbox"/>
+              <label for="area-manager-page-fields"> Restaurant 2</label>
               </div>
             </div>
           </div>
           <div>
-            <input id="save" type="submit" value="Save" />
+            <input id="areamanager-page-save-button" type="submit" value="Save" />
           </div>
         </div>
   );
