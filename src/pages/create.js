@@ -28,7 +28,7 @@ const Create = () => {
         </select>
       </div>
       <div>
-        <input id="save" type="submit" value="Save" />
+        <input id="createres-page-save-button" type="submit" value="Save" />
       </div>
     </div>
   );

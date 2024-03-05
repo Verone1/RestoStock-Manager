@@ -1098,3 +1098,24 @@ body {
   border: #B1D3FB;
   float: right;
 }
+
+/* Button to save and create user */
+#createres-page-save-button {
+  background-color: rgb(1, 163, 51);
+  /* colour of background*/
+  border: white;
+  /* colour of border*/
+  padding: 15px;
+  /* padding size set to fit text but not look too big either*/
+  border-radius: 20px;
+  /* provides curved box effect*/
+  color: white;
+  /* colour of text*/
+  font-weight: bold;
+  float: right;
+}
+
+/* effect on hovering the save button */
+#createres-page-save-button:hover {
+  color: black;
+}
