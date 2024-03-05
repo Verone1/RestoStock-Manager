@@ -8,8 +8,8 @@ import Create from './pages/create';
 import CreateAM from './pages/createam';
 import Message from './pages/Messages';
 import Modify from './pages/modify';
-import Report from './pages/report';
-import Reports from './pages/ReportPage';
+import Report from './pages/adminReport';
+import Reports from './pages/reportDamage';
 import Approval from './pages/approval';
 
 const Header = ({ onLogout, user }) => {
