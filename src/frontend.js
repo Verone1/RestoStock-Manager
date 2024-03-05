@@ -8,8 +8,8 @@ import Create from './pages/create';
 import CreateAM from './pages/createam';
 import Message from './pages/Messages';
 import Modify from './pages/modify';
-import Report from './pages/adminReport';
-import Reports from './pages/reportDamage';
+import AdminReport from './pages/adminReport';
+import DamageReport from './pages/reportDamage';
 import Approval from './pages/approval';
 
 const Header = ({ onLogout, user }) => {
@@ -37,7 +37,7 @@ const Option = ({ access }) => {
           <NavLink to="/" className={Catalogue}>
             Order Items
           </NavLink>
-          <NavLink to="/report" className={Report}>
+          <NavLink to="/report" className={DamageReport}>
             Report faulty/missing item
           </NavLink>
           <NavLink to="/message" className={Message}>
@@ -50,10 +50,10 @@ const Option = ({ access }) => {
           <NavLink to="/approval" className={Approval}>
             POS request Orders
           </NavLink>
-          <NavLink to="/reports" className={Reports}>
+          <NavLink to="/reports" className={DamageReport}>
             Report page
           </NavLink>
-          <NavLink to="/report" className={Report}>
+          <NavLink to="/report" className={AdminReport}>
             Budget tracker
           </NavLink>
           <NavLink to="/message" className={Message}>
@@ -63,7 +63,7 @@ const Option = ({ access }) => {
       )}
       {access === 'headoffice' && (
         <>
-          <NavLink to="/reports" className={Reports}>
+          <NavLink to="/adminReport" className={AdminReport}>
             Reports
           </NavLink>
           <NavLink to="/create" className={Create}>
