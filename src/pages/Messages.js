@@ -40,8 +40,8 @@ const Messages = ({ user }) => {
   
 
   return (
-    <div className="container">
-      <div className="contact">
+    <div className="messages-page-container">
+      <div className="messages-contact-container">
         <div>Messages</div>
         {names.map((button, index) => (
           <button key={index} onClick={() => optionClick(button.name)}>
@@ -50,21 +50,21 @@ const Messages = ({ user }) => {
         ))}
       </div>
 
-      <div className="messages">
+      <div className="messages-container">
         {messages.map((message, index) => (
           <div key={index}>{message}</div>
         ))}
       </div>
 
-      <div className="textcontainer">
+      <div className="mesaages-text-container">
         <input
           type="text"
-          id="textBox"
+          id="messages-text-box"
           placeholder="Enter message here..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <button id="send" onClick={handleSendClick}>
+        <button id="messages-send-button" onClick={handleSendClick}>
           Send
         </button>
         <br />
