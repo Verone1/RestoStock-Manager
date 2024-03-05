@@ -49,14 +49,14 @@ const Modify = () => {
   };
 
   return (
-    <div className="container">
+    <div className="modify-page-container">
       <div className="user">
         <div>
           <form onChange={perform}>
             <input
               type="text"
               value={contact}
-              id="search"
+              id="modify-page-search"
               placeholder="Search.."
               onChange={(e) => setContact(e.target.value)}
             />
@@ -71,13 +71,13 @@ const Modify = () => {
         </ul>
       </div>
 
-      <div className="description">
+      <div className="modify-page-description">
         <div>
           <a>*</a>
           <label>Name:</label>
           <input
             type="text"
-            id="fields"
+            id="modify-page-fields"
             placeholder="Enter Name"
             value={selectedContact ? selectedContact.name : ''}
             onChange={(e) => setSelectedContact({ ...selectedContact, name: e.target.value })}
@@ -89,7 +89,7 @@ const Modify = () => {
           <label>Phone Number:</label>
           <input
             type="text"
-            id="fields"
+            id="modify-page-fields"
             placeholder="Enter Phone Number"
             value={selectedContact ? selectedContact.phoneNumber : ''}
             onChange={(e) => setSelectedContact({ ...selectedContact, phoneNumber: e.target.value })}
@@ -101,7 +101,7 @@ const Modify = () => {
           <label>Budget:</label>
           <input
             type="text"
-            id="fields"
+            id="modify-page-fields"
             placeholder="Enter Budget"
             value={selectedContact ? selectedContact.budget : ''}
             onChange={(e) => setSelectedContact({ ...selectedContact, budget: e.target.value })}
@@ -111,7 +111,7 @@ const Modify = () => {
         <div>
           <a>*</a>
           <label>Restaurants:</label>
-          <div id="restaurants">
+          <div id="modify-page-restaurants-list">
             {restaurants.map((restaurant) => (
               <div key={restaurant.id}>
                 <input type="checkbox" id={`restaurant-${restaurant.id}`} />
@@ -122,9 +122,9 @@ const Modify = () => {
         </div>
       </div>
 
-      <div className="textcontainer">
+      <div className="modify-text-container">
         <button className="delete">Delete Account</button>
-        <input id="save" type="submit" value="Save" />
+        <input id="modify-save-button" type="submit" value="Save" />
         <br />
       </div>
     </div>

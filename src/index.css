@@ -375,117 +375,6 @@ body {
 
 }
 
-
-
-.user {
-  /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 100vh;
-  width: 35%;
-  padding: 0% 0% 0% 10%;
-  margin-left: 10%;
-  background-color: rgb(228, 248, 253);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-}
-
-
-.user div {
-  margin-top: 0;
-  width: 100%;
-  text-align: center;
-  font-size: x-large;
-  background-color: #B1D3FB;
-  font-weight: bold;
-  color: white;
-  /* colour of text*/
-  padding: 10% 0%;
-  /* size of each section*/
-  text-decoration: none;
-  /* removes any hyperlinks on the text*/
-  display: block;
-  /*boxes each section*/
-}
-
-
-
-.user ul {
-  text-align: center;
-  background-color: #C3F7ED;
-  color: black;
-  /* colour of text*/
-  text-decoration: none;
-  /* removes any hyperlinks on the text*/
-  display: block;
-  /*boxes each section*/
-  list-style-type: none;
-  padding-left: 0;
-  /* size of each section*/
-}
-
-.user li {
-  padding: 10%;
-  /* size of each section*/
-}
-
-.user ul li:hover {
-  background-color: #0F715D;
-  /* new colour of background*/
-  color: rgb(255, 255, 255);
-  /* new colour of text*/
-}
-
-.description {
-  height: 84vh;
-  width: 45%;
-  padding-top: 5vh;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  background-color: rgb(250, 250, 250);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-}
-
-.description div {
-  background-color: rgb(199, 232, 253);
-  /* colour of background*/
-  width: 75%;
-  margin-top: 1%;
-  padding: 1vh;
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-  border-radius: 4px;
-}
-
-#search {
-  width: 80%;
-  padding: 1vh;
-  border: #B1D3FB;
-}
-
 .buttons {
   position: absolute;
   width: 42%;
@@ -1083,7 +972,7 @@ body {
 }
 
 /* CSS for the area which users can send the messages */
-.mesaages-text-container {
+.messages-text-container {
   position: absolute;
   width: 42%;
   height: 12.5vh;
@@ -1127,4 +1016,174 @@ body {
 /* Hover effect on the send button */
 #messages-send-button:hover {
   color: black;
+}
+
+
+
+
+/* || MODIFY USER PAGE */
+
+/* Area which the content outside of the header and nav bar will sit in */
+.modify-page-container {
+  display: flex;
+}
+
+.user {
+  /*width: 40%; /* sets the width of the navigation bar to 20%*/
+  height: 100vh;
+  width: 35%;
+  padding: 0% 0% 0% 10%;
+  margin-left: 10%;
+  background-color: rgb(228, 248, 253);
+  /* colour of background*/
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+}
+
+.user div {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  background-color: #B1D3FB;
+  font-weight: bold;
+  color: white;
+  /* colour of text*/
+  padding: 10% 0%;
+  /* size of each section*/
+  text-decoration: none;
+  /* removes any hyperlinks on the text*/
+  display: block;
+  /*boxes each section*/
+}
+
+.user ul {
+  text-align: center;
+  background-color: #C3F7ED;
+  color: black;
+  /* colour of text*/
+  text-decoration: none;
+  /* removes any hyperlinks on the text*/
+  display: block;
+  /*boxes each section*/
+  list-style-type: none;
+  padding-left: 0;
+  /* size of each section*/
+}
+
+.user li {
+  padding: 10%;
+  /* size of each section*/
+}
+
+.user ul li:hover {
+  background-color: #0F715D;
+  /* new colour of background*/
+  color: rgb(255, 255, 255);
+  /* new colour of text*/
+}
+
+.modify-page-description {
+  height: 84vh;
+  width: 45%;
+  padding-top: 5vh;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: rgb(250, 250, 250);
+  /* colour of background*/
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+}
+
+.modify-page-description div {
+  background-color: rgb(199, 232, 253);
+  /* colour of background*/
+  width: 75%;
+  margin-top: 1%;
+  padding: 1vh;
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+  border-radius: 4px;
+}
+
+/* CSS of the list of items showing up */
+#modify-page-restaurants-list {
+  height: 10vh;
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
+}
+
+#modify-page-search {
+  width: 80%;
+  padding: 1vh;
+  border: #B1D3FB;
+}
+
+/* CSS to be used for the field to input data */
+#modify-page-fields {
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
+}
+
+/* Button to save and create user */
+#modify-save-button {
+  background-color: rgb(1, 163, 51);
+  /* colour of background*/
+  border: white;
+  /* colour of border*/
+  padding: 15px;
+  /* padding size set to fit text but not look too big either*/
+  border-radius: 20px;
+  /* provides curved box effect*/
+  color: white;
+  /* colour of text*/
+  font-weight: bold;
+  float: right;
+}
+
+/* CSS for the area which users can send the messages */
+.modify-text-container {
+  position: absolute;
+  width: 42%;
+  height: 12.5vh;
+  margin-top: 85vh;
+  margin-left: 52.75%;
+  padding-top: 1%;
+  padding-left: 5%;
+  background-color: rgb(220, 220, 220);
+  /* colour of background*/
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
 }
