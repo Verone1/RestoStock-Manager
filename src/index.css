@@ -1054,3 +1054,47 @@ body {
 .login-button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+/* || CREATE RESTAURANT PAGE */
+
+/* area which will contain the creation fields */
+.createres-page-container {
+  height: 100vh;
+  padding: 0% 0% 0% 20%;
+  background-color: rgb(228, 248, 253);
+  /* colour of background*/
+}
+
+/* to be used in each creation field */
+.createres-page-container div {
+  font-weight: bold;
+  width: 75%;
+  padding: 2vh;
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+  border-radius: 4px;
+}
+
+/* required field class creation */
+.createres-page-container a {
+  color: red;
+}
+
+/* CSS to be used for the field to input data */
+#createres-page-fields {
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
+}
