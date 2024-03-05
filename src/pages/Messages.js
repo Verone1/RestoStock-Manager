@@ -1,46 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '../index.css';
 
-import './index.css'; //imports this file from the directory which is providing the CSS
-
-function Messages() {
-  const [option, optionStatus] = useState(null);
+const Messages = ({ user }) => {
+  const [option, setOption] = useState(null);
+  const [inputText, setInputText] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [names, setNames] = useState([]);
 
   const optionClick = (button) => {
-    optionStatus(button);
+    setOption(button);
   };
 
-  const contacts = ['Restaurant London Holborn', 'Verone'];
+  const handleSendClick = () => {
+    if (inputText.trim() !== '') {
+      const newMessage = `${inputText}\n-  ${user}`;
+      setMessages([...messages, newMessage]);
+      setInputText('');
+    }
+  };
+
+
+
+  useEffect(() => {
+    const fetchNames = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/names');
+        
+        const data = await response.json();
+        setNames(data);
+      } catch (error) {
+      }
+    };
+
+    fetchNames();
+  }, []);
+
+  
+
+  
 
   return (
     <div className="container">
       <div className="contact">
-          <div>Messages</div>
-          {contacts.map((button, index) => (
-            <button key={index} onClick={() => optionClick(button)}>
-              {button}
-            </button>
-          ))}
+        <div>Messages</div>
+        {names.map((button, index) => (
+          <button key={index} onClick={() => optionClick(button.name)}>
+            {button.name}
+          </button>
+        ))}
       </div>
 
       <div className="messages">
-          {optionStatus && (
-          <div>
-            //db code to be added 
-          </div>
-        )}
+        {messages.map((message, index) => (
+          <div key={index}>{message}</div>
+        ))}
       </div>
 
       <div className="textcontainer">
-          <input type="text" id="textBox" placeholder="Enter message here..." />
-          <input id="send" type="submit" value="Send" />
-          <br />
+        <input
+          type="text"
+          id="textBox"
+          placeholder="Enter message here..."
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+        />
+        <button id="send" onClick={handleSendClick}>
+          Send
+        </button>
+        <br />
       </div>
     </div>
-
   );
-};    
+}
 
-
-
-export default Messages;
+export default function App({ user}) {
+  return (
+    <div>
+      <Messages user={user} />
+    </div>
+  );
+}
 
