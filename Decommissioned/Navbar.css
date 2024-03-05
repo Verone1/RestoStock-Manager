@@ -1,0 +1,52 @@
+/* Navigation styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px; /* Adjust the width as needed */
+  height: 100%; /* Set a fixed height */
+  background-color: #00a8f7;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Navigation item styles */
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links li {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px; /* Adjust padding to control the box size */
+}
+
+.nav-links a {
+  width: 100%;
+  background-color: #3498db; /* Set a different background color */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Add cursor pointer on hover */
+  border-radius: 5px;
+  padding: 20px 50px 20px;
+}
+
+/* Hover effect for navigation items */
+.nav-links a:hover {
+  background-color: #007BFF; /* Change background color on hover */
+  transition: background-color 0.2s;
+}

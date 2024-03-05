@@ -1,0 +1,85 @@
+    /* panel for the requests that come in */
+    .requests{
+      height: 100vh;
+      width: 35%;
+      padding: 0% 0% 0% 20%;
+      background-color: rgb(228,248,253); /* colour of background*/
+      font-family: Arial; /* font of text*/
+      font-size: large; /* size of text*/
+      color: black; /* colour of text*/
+    }
+
+    /* `Panel Header styling  */
+    .requests div{
+      width: 100%;
+      text-align: center;
+      background-color: rgb(242,242,242);
+      font-weight: bold;
+      color: black; /* colour of text*/
+      padding: 7% 0% ; /* size of each section*/
+      text-decoration: none; /* removes any hyperlinks on the text*/
+      display: block; /*boxes each section*/
+    }
+
+    /* Styling of the individual requests that come in */
+    .requests a{
+      width: 100%;
+      text-align: center;
+      background-color: rgb(217,217,217);
+      color: black; /* colour of text*/
+      padding: 5% 0% ; /* size of each section*/
+      text-decoration: none; /* removes any hyperlinks on the text*/
+      display: block; /*boxes each section*/
+    }
+    
+    /* Hover effect when requests are being hovered upon */
+    .requests a:hover {
+      background-color: rgb(127, 127, 127); /* new colour of background*/
+      color: rgb(255, 255, 255); /* new colour of text*/
+    }
+
+    /* area which will show the description of the requests */
+    .description{
+      /*width: 40%; /* sets the width of the navigation bar to 20%*/
+      height: 95vh;
+      width: 45%;
+      padding-top: 5vh;
+      padding-left: 5%;
+      background-color: rgb(243, 252, 216); /* colour of background*/
+      font-family: Arial; /* font of text*/
+      font-size: large; /* size of text*/
+      color: black; /* colour of text*/
+      text-align: left; /* centers the text*/   
+    }
+
+    /* approve button to accept the request */
+    .approve{
+      background-color: rgb(1, 163, 51); /* colour of background*/
+      border: white; /* colour of border*/
+      padding: 15px; /* padding size set to fit text but not look too big either*/
+      border-radius: 20%; /* provides curved box effect*/
+      color: white; /* colour of text*/
+      font-weight: bold;
+    }
+
+    /* effect upon hovering the approve button */
+    .approve:hover{
+      color: black;
+    }
+  
+    /* button to reject the requests  */
+    .reject{
+      background-color: red; /* colour of background*/
+      border: white; /* colour of border*/
+      padding: 15px; /* padding size set to fit text but not look too big either*/
+      border-radius: 20%; /* provides curved box effect*/
+      color: white; /* colour of text*/
+      font-weight: bold;
+    }
+
+    /* hover effect over the reject button */
+    .reject:hover{
+      color: black;
+    }
+
+ 
