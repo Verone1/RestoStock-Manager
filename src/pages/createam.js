@@ -4,7 +4,7 @@ import '../index.css';
 
 const CreateAM = () => {
   return (
-    <div className="creation">
+    <div className="areamanager-page-container">
           <div>
             <a>*</a>
             <label>Name:</label>
@@ -23,7 +23,7 @@ const CreateAM = () => {
           <div>
             <a>*</a>
             <label>Restaurants:</label>
-            <div id="restaurants">
+            <div id="areamanager-page-restaurants-list">
               <div id="fields">
               <input id="fields" type="checkbox"/>
               <label for="fields"> Restaurant 1</label>
@@ -39,7 +39,7 @@ const CreateAM = () => {
             </div>
           </div>
           <div>
-            <input id="save" type="submit" value="Save" />
+            <input id="areamanager-page-save-button" type="submit" value="Save" />
           </div>
         </div>
   );

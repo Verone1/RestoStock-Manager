@@ -569,37 +569,6 @@ body {
   padding: 1vh;
 }
 
-/* area which will contain the creation fields */
-.creation {
-  height: 100vh;
-  padding: 0% 0% 0% 20%;
-  background-color: rgb(228, 248, 253);
-  /* colour of background*/
-}
-
-/* to be used in each creation field */
-.creation div {
-  font-weight: bold;
-  width: 75%;
-  padding: 2vh;
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-  border-radius: 4px;
-}
-
-/* To be used on specific texts */
-.creation a {
-  color: red;
-}
-
 /* area which button will sit in*/
 .buttoncontainer {
   position: absolute;
@@ -612,38 +581,8 @@ body {
 
 }
 
-/* Button to save and create user */
-#save {
-  background-color: rgb(1, 163, 51);
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20px;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-  float: right;
-}
-
-/* effect on hovering the save button */
-#save:hover {
-  color: black;
-}
-
 /* CSS to be used for the field to input data */
 #fields {
-  width: 60%;
-  padding: 1vh;
-  border: #B1D3FB;
-  float: right;
-}
-
-/* CSS of the list of items showing up */
-#restaurants {
-  height: 10vh;
   width: 60%;
   padding: 1vh;
   border: #B1D3FB;
@@ -777,24 +716,6 @@ body {
   /* colour of text*/
   text-align: left;
   /* centers the text*/
-}
-
-#save {
-  background-color: rgb(1, 163, 51);
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20px;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-}
-
-#save:hover {
-  color: black;
 }
 
 .delete {
@@ -1071,4 +992,65 @@ body {
 
 
 
-/* || */
+/* || CREATE AREA MANAGER PAGE */
+
+/* area which will contain the creation fields */
+.areamanager-page-container {
+  height: 100vh;
+  padding: 0% 0% 0% 20%;
+  background-color: rgb(228, 248, 253);
+  /* colour of background*/
+}
+
+/* to be used in each creation field */
+.areamanager-page-container div {
+  font-weight: bold;
+  width: 75%;
+  padding: 2vh;
+  font-family: Arial;
+  /* font of text*/
+  font-size: large;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+  border-radius: 4px;
+}
+
+/* required field class creation */
+.areamanager-page-container a {
+  color: red;
+}
+
+/* CSS of the list of items showing up */
+#areamanager-page-restaurants-list {
+  height: 10vh;
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
+}
+
+/* Button to save and create user */
+#areamanager-page-save-button {
+  background-color: rgb(1, 163, 51);
+  /* colour of background*/
+  border: white;
+  /* colour of border*/
+  padding: 15px;
+  /* padding size set to fit text but not look too big either*/
+  border-radius: 20px;
+  /* provides curved box effect*/
+  color: white;
+  /* colour of text*/
+  font-weight: bold;
+  float: right;
+}
+
+/* effect on hovering the save button */
+#areamanager-page-save-button:hover {
+  color: black;
+}
