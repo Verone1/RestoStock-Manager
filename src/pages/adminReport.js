@@ -145,9 +145,9 @@ const ReportPage = () => {
 
   return (
     <div className='report-page'>
-      <div className="title-container">
-        <h1 className="page-title">Report Management</h1>
-        <p className="page-description">
+      <div className="report-title-container">
+        <h1 className="report-page-title">Report Management</h1>
+        <p className="report-page-description">
           Here you can view and manage various reports related to inventory, orders, and more.
         </p>
       </div>
@@ -159,9 +159,9 @@ const ReportPage = () => {
           <option value="Report 3">Report 3</option>
           <option value="Report 4">Report 4</option>
         </select>
-        <button onClick={generateReport} className='generate-button'>Generate Report</button>
+        <button onClick={generateReport} className='report-generate-button'>Generate Report</button>
         {dataReport.length > 0 && (
-          <CSVLink {...csvExtract} className='export-button'>Export to CSV</CSVLink>
+          <CSVLink {...csvExtract} className='report-export-button'>Export to CSV</CSVLink>
         )}
       </div>
       <div className='report-data-container'>
