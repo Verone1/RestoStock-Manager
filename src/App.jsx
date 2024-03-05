@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
-import CreateAM from './pages/createAM';
+import CreateAM from './pages/createam';
 import Message from './pages/message';
 import Modify from './pages/modify';
 import Report from './pages/report';
