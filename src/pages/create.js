@@ -5,10 +5,10 @@ import '../index.css';
 const Create = () => {
   return (
     <div className="createres-page-container">
-        <h1 className="report-page-title">Create Restaurant</h1>
-        <p className="report-page-description">
-          Please fill out the following fields to create your restaurant.
-        </p>
+      <h1 className="report-page-title">Create Restaurant</h1>
+      <p className="report-page-description">
+        Please fill out the following fields to create your restaurant.
+      </p>
       <div>
         <a>*</a>
         <label>Name:</label>
@@ -36,6 +36,6 @@ const Create = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Create;

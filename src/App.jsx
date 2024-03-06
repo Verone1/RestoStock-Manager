@@ -21,7 +21,7 @@ function App() {
   const navigate = useNavigate();
 
   const logOut = () => {
-    
+
     setLoggedInState(false);
     navigate("/login");
   }
@@ -32,20 +32,20 @@ function App() {
       setAccessLevel('restaurant');
       setUser(username);
       navigate("/");
-    } 
+    }
     else if (username === "verone" && password === "password") { // temp creds
       setLoggedInState(true);
       setAccessLevel('am');
       setUser(username);
       navigate("/approval");
-    } 
+    }
     else if (username === "admin" && password === "password") { // temp creds
       setLoggedInState(true);
       setAccessLevel('headoffice');
       setUser(username);
       navigate("/reports");
     } else {
-      alert("Invalid credentials"); 
+      alert("Invalid credentials");
     }
   };
 
@@ -56,16 +56,16 @@ function App() {
   else {
     return (
       <div className="app">
-        <Frontend onLogout={logOut} accessLevel={accessLevel} user={user}/>
+        <Frontend onLogout={logOut} accessLevel={accessLevel} user={user} />
         <Routes>
-          <Route path="/" element={<Catalogue user={user}/>} />
+          <Route path="/" element={<Catalogue user={user} />} />
           <Route path="/create" element={<Create />} />
           <Route path="/createam" element={<CreateAM />} />
-          <Route path="/message" element={<Message user={user}/>} />
+          <Route path="/message" element={<Message user={user} />} />
           <Route path="/modify" element={<Modify />} />
-          <Route path="/report" element={<Report user={user}/>} />
-          <Route path="/reports" element={<Reports user={user}/>} />
-          <Route path="/approval" element={<Approval user={user}/>} />
+          <Route path="/report" element={<Report user={user} />} />
+          <Route path="/reports" element={<Reports user={user} />} />
+          <Route path="/approval" element={<Approval user={user} />} />
           <Route
             path="*"
             element={<h1 className="not-found">Page Not Found</h1>}
@@ -75,7 +75,7 @@ function App() {
     );
   }
 
-  
+
 }
 
 export default App;
