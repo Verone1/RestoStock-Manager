@@ -333,7 +333,7 @@ tr:hover {
 
 /* div container for header and restaurant names */
 .approval-requests-container {
-  height: 775px;
+  height: 85vh;
   width: 15%;
   margin-left: 15%;
   background-color: #373b44;

@@ -17,8 +17,8 @@ const ReportPage = () => {
   };
 
   return (
-    <div className="report-page">
-      <h1 className="report-title">Report Damaged or Broken Item</h1>
+    <div className="page-container">
+      <h1 className="page-title">Report Damaged or Broken Item</h1>
       <form>
         <div className="form-group">
           <label htmlFor="item">Item Name:</label>
@@ -64,8 +64,8 @@ const ReportPage = () => {
           />
         </div>
 
-        <button type="button" onClick={handleSubmit}>
-          Submit Report
+        <button type="button" id="save-button" onClick={handleSubmit}>
+          Submit
         </button>
       </form>
     </div>
