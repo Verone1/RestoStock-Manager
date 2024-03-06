@@ -5,10 +5,12 @@ import '../index.css';
 const Create = () => {
   return (
     <div className="page-container">
+      <div classname="title-container">
       <h1 className="page-title">Create Restaurant</h1>
       <p className="page-description">
         Please fill out the following fields to create your restaurant.
       </p>
+      </div>
       <div>
         <a>*</a>
         <label>Name:</label>

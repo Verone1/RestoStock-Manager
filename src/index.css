@@ -200,8 +200,10 @@ body {
 /* || GLOBAL CSS */
 
 .page-container {
-  padding: 1% 16%;
+  padding: 2% 16%;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background: #E3F8FD;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -209,21 +211,23 @@ body {
 
 /* div container for title on report page */
 .title-container {
+  text-align: center;
   padding: 10px;
 }
 
 /* Heading 1 class for report page title */
 .page-title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
   margin: 0;
 }
 
 /* report page description paragraph formatting */
 .page-description {
   margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 30px;
+  font-size: 18px;
   font-weight: 300;
 }
 
