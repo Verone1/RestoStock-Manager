@@ -5,7 +5,12 @@ import { NavLink } from "react-router-dom";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoIosCreate } from "react-icons/io";
 import { MdOutlineCreate } from "react-icons/md";
-import { CiMail } from "react-icons/ci";
+import { IoIosMail } from "react-icons/io";
+import { MdInventory } from "react-icons/md";
+import { FaBoxOpen } from "react-icons/fa6";
+import { MdReportProblem } from "react-icons/md";
+import { MdRequestPage } from "react-icons/md";
+import { FaMoneyBillAlt } from "react-icons/fa";
 
 
 import Catalogue from './pages/catalogue';
@@ -38,33 +43,47 @@ const Option = ({ access, user }) => {
       {access === 'restaurant' && (
         <>
           <NavLink to="/" className={Catalogue}>
+            <MdInventory className='iconStyle' />
             View Inventory
           </NavLink>
           <NavLink to="/" className={Catalogue}>
+            <FaBoxOpen className='iconStyle' />
             Order Items
           </NavLink>
           <NavLink to="/report" className={DamageReport}>
+            <MdReportProblem className='iconStyle' />
             Report faulty/missing item
           </NavLink>
           <NavLink to="/message" className={Message}>
+            <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
+          <div className="welcome-text">© 2024 | RestoStock Manager.
+            You are logged in as {user}
+          </div>
         </>
       )}
       {access === 'am' && (
         <>
           <NavLink to="/approval" className={Approval}>
+            <MdRequestPage className='iconStyle' />
             POS request Orders
           </NavLink>
           <NavLink to="/reports" className={DamageReport}>
-            Report page
+            <HiDocumentReport className='iconStyle' />
+            Reports
           </NavLink>
           <NavLink to="/report" className={AdminReport}>
-            Budget tracker
+            <FaMoneyBillAlt className='iconStyle' />
+            Budget Tracker
           </NavLink>
           <NavLink to="/message" className={Message}>
+          <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
+          <div className="welcome-text">© 2024 | RestoStock Manager.
+            You are logged in as {user}
+          </div>
         </>
       )}
       {access === 'headoffice' && (
@@ -86,11 +105,11 @@ const Option = ({ access, user }) => {
             Modify User
           </NavLink>
           <NavLink to="/message" className={Message}>
-            <CiMail className='iconStyle' />
+            <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
-          <div className="welcome-text">© 2024 | RestoStock Manager. 
-          You are logged in as {user}
+          <div className="welcome-text">© 2024 | RestoStock Manager.
+            You are logged in as {user}
           </div>
         </>
       )}
