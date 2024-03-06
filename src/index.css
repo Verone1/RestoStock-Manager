@@ -1,8 +1,5 @@
-/* Styling of body section set so that it fills up the whole screen*/
-body {
-  margin: 0;
-  padding: 0;
-}
+
+
 
 /* This is the style of the actual header */
 .header {
@@ -10,8 +7,6 @@ body {
   /* colour of background*/
   color: white;
   /* colour of text*/
-  padding: 20px;
-  /* padding added to make the header not look so thin*/
   font-family: Arial;
   /* font of text*/
   align-items: center;
@@ -20,33 +15,18 @@ body {
   /* This controls the positioning of elements and ensures that it is kept aligned*/
 }
 
-/* This is the CSS for the home button on the header */
 
 
-/* The styling of the home button when it is being hovered upon */
-.header a:hover {
-  color: rgb(0, 0, 0);
-  /*changes text colour to black*/
-}
 
-/* This is the CSS for the text on the header */
-.header p {
-  text-align: center;
-  /* makes sure that this is centered in the middle of the header*/
-  font-size: xx-large;
-  /* size of text*/
-  font-weight: bold;
-  /* Makes the text bold*/
-  margin: 0;
-  /* Sets the margin area to 0*/
-  flex: auto;
-  /* this is set on this element as this is inbetween the other two elements ensuring that they are spaced out evenly*/
+.header img {
+  position: relative;
+  left: 25%;
 }
 
 /* Styling for the button on the right of the header */
 .icon {
-  margin-right: 52px;
-  /* set accordingly so that the sign out text can fit*/
+  position: Absolute;
+  right: 5%;
 }
 
 /* Styling of the actual icon button prior to it being hovered*/
@@ -80,6 +60,11 @@ body {
   /* colour of text*/
 }
 
+/* When the icon button is hovered upon then show the options */
+.icon:hover .icon-list {
+  display: block;
+}
+
 /* Styling of options coming out of icon button when it is being hovered upon */
 .icon-list:hover {
   background-color: rgb(37, 170, 130);
@@ -90,76 +75,8 @@ body {
   /* This removes any hyperlinks or anything else*/
 }
 
-/* When the icon button is hovered upon then show the options */
-.icon:hover .icon-list {
-  display: block;
-}
-
-/* Styling of body section set so that it fills up the whole screen*/
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* This is the style of the actual header  */
-.header {
-  background-color: #016A63;
-  /* colour of background*/
-  color: white;
-  /* colour of text*/
-  padding: 0%;
-  /* padding added to make the header not look so thin*/
-  font-family: Arial;
-  /* font of text*/
-  align-items: center;
-  /*makes sure that all items are aligned inside the header */
-}
-
-.header img {
-  position: relative;
-  left: 25%;
-}
-
-/* Styling for the button on the right of the header */
-.icon {
-  position: Absolute;
-  right: 5%;
-}
-
-/* Styling of options coming out of icon button */
-.icon-list {
-  display: none;
-  /* ensures this stays hidden unless told otherwise*/
-  background-color: rgb(200, 218, 214);
-  /* colour of background*/
-  padding: 15px;
-  /* sets the size of the box*/
-  color: black;
-  /* colour of text*/
-}
-
-/* Styling of options coming out of icon button when it is being hovered upon */
-.icon-list:hover {
-  background-color: rgb(126, 134, 151);
-  /* new colour of background*/
-  color: rgb(255, 255, 255);
-  /* new colour of text*/
-  text-decoration: none;
-  /* This removes any hyperlinks or anything else*/
-}
-
-/* When the icon button is hovered upon then show the options */
-.icon:hover .icon-list {
-  display: block;
-}
 
 
-
-#selected {
-  background-color: #1e8071;
-  /* new colour of background*/
-  color: rgb(255, 255, 255);
-}
 
 
 
@@ -199,13 +116,23 @@ body {
 
 /* || GLOBAL CSS */
 
+html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .page-container {
   padding: 2% 16%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #E3F8FD;
-  min-height: 100vh;
+  min-height: 88vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -252,7 +179,32 @@ body {
   color: red;
 }
 
+
+
 /* Button to save and create user */
+#delete-button {
+  padding: 10px 15px;
+  margin-left: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: rgb(224, 67, 67);
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* generate and export button hover for reports page formatting */
+#delete-button:hover {
+  background-color: #d32020;
+  border-color: #f00101;
+}
+
+
+/* generate and export button for reports page formatting */
 #save-button {
   padding: 10px 15px;
   font-size: 16px;
@@ -260,10 +212,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-/* generate and export button for reports page formatting */
-#save-button {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   background-color: #007bff;
@@ -607,6 +555,7 @@ tr:hover {
 
 /* Area which the content outside of the header and nav bar will sit in */
 .messages-page-container {
+  background-color: #E3F8FD;
   display: flex;
 }
 
@@ -771,13 +720,17 @@ tr:hover {
   display: flex;
 }
 
+.modify-button-container{
+  margin-top: -50px;  
+}
+
 .modify-input-container {
   padding: 2% 4%;
   display: flex;
   flex-direction: column;
   align-items: left;
   background: #E3F8FD;
-  min-height: 100vh;
+  min-height: 88vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -804,10 +757,9 @@ tr:hover {
 
 .user {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 100vh;
-  width: 20%;
-  padding: 0% 0% 0% 5%;
-  margin-left: 10%;
+  height: 88vh;
+  width: 15%;
+  margin-left: 15%;
   background-color: #373b44;
   /* colour of background*/
   font-family: Arial;
@@ -886,64 +838,6 @@ tr:hover {
   float: right;
 }
 
-/* Button to save and create user */
-#modify-save-button {
-  background-color: rgb(1, 163, 51);
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20px;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-  float: right;
-}
-
-/* CSS for the area which users can send the messages */
-.modify-text-container {
-  position: absolute;
-  width: 42%;
-  height: 12.5vh;
-  margin-top: 85vh;
-  margin-left: 52.75%;
-  padding-top: 1%;
-  padding-left: 5%;
-  background-color: rgb(220, 220, 220);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-}
-
-.delete {
-  background-color: red;
-  /* colour of background*/
-  border: white;
-  /* colour of border*/
-  padding: 15px;
-  /* padding size set to fit text but not look too big either*/
-  border-radius: 20px;
-  /* provides curved box effect*/
-  color: white;
-  /* colour of text*/
-  font-weight: bold;
-}
-
-.delete:hover {
-  color: black;
-}
-
-.description a {
-  color: red;
-}
 
 
 
@@ -1009,7 +903,7 @@ tr:hover {
 
 /* Styling of side panel */
 .options {
-  height: 100vh;
+  min-height: 88vh;
   width: 15%;
   position: absolute;
   background-color: #2a2d34;

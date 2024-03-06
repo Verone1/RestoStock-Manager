@@ -127,12 +127,10 @@ const Modify = () => {
             ))}
           </div>
         </div>
+        <div className='modify-button-container'>
+        <input id="save-button" type="submit" value="Save" />
+        <button id="delete-button">Delete Account</button>
       </div>
-
-      <div className="modify-text-container">
-        <button className="delete">Delete Account</button>
-        <input id="modify-save-button" type="submit" value="Save" />
-        <br />
       </div>
     </div>
   );

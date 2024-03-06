@@ -32,7 +32,7 @@ const Header = ({ onLogout, user }) => {
   );
 }
 
-const Option = ({ onLogout, access }) => {
+const Option = ({ access, user }) => {
   return (
     <div id="leftPane" className="options">
       {access === 'restaurant' && (
@@ -89,6 +89,9 @@ const Option = ({ onLogout, access }) => {
             <CiMail className='iconStyle' />
             Mailbox
           </NavLink>
+          <div className="welcome-text">© 2024 | Restostock Manager. 
+          You are logged in as {user}
+          </div>
         </>
       )}
     </div>
