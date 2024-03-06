@@ -123,7 +123,7 @@ html {
 
 * {
   box-sizing: border-box;
-
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .page-container {
@@ -554,16 +554,16 @@ tr:hover {
 
 /* Area which the content outside of the header and nav bar will sit in */
 .messages-page-container {
-  background-color: #E3F8FD;
   display: flex;
 }
 
 /* side panel which will allow to select the appropriate contact for the user to message*/
 .messages-contact-container {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  width: 35%;
-  padding: 0% 0% 0% 20%;
-  background-color: rgb(228, 248, 253);
+  height: 775px;
+  width: 15%;
+  margin-left: 15%;
+  background-color: #373b44;
   /* colour of background*/
   font-family: Arial;
   /* font of text*/
@@ -577,19 +577,16 @@ tr:hover {
 
 /* To be used for the header section of this panel*/
 .messages-contact-container div {
+  margin-top: 0;
   width: 100%;
   text-align: center;
-  font-size: x-large;
-  background-color: #B1D3FB;
-  font-weight: bold;
+  font-size: 20px;
+  background-color: #505561;
+  font-weight: 300;
   color: white;
-  /* colour of text*/
-  padding: 7% 0%;
-  /* size of each section*/
+  padding: 12% 0%;
   text-decoration: none;
-  /* removes any hyperlinks on the text*/
   display: block;
-  /*boxes each section*/
 }
 
 /* To be used for actual contacts, that will be seperated into blocks  */
