@@ -145,9 +145,9 @@ const ReportPage = () => {
 
   return (
     <div className='page-container'>
-      <div className="report-title-container">
-        <h1 className="report-page-title">Report Management</h1>
-        <p className="report-page-description">
+      <div className="title-container">
+        <h1 className="page-title">Report Management</h1>
+        <p className="page-description">
           Here you can view and manage various reports related to inventory, orders, and more.
         </p>
       </div>
