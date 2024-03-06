@@ -506,11 +506,12 @@ tr:hover {
 
 /* CSS of the list of items showing up */
 #areamanager-page-restaurants-list {
-  height: 10vh;
+  margin-top: -5%;
+  height: 15vh;
   width: 60%;
-  padding: 1vh;
   border: #B1D3FB;
-  float: right;
+  padding-left: 10vh;
+  overflow-y: scroll;
 }
 
 /* Button to save and create user */

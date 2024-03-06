@@ -31,7 +31,6 @@ const CreateAM = () => {
         <label>Restaurants:</label>
         <div id="areamanager-page-restaurants-list">
           <div id="page-fields">
-            <input id="fields" type="checkbox" />
             <label for="fields"> Restaurant 1</label>
             <input id="fields" type="checkbox" />
             <label for="fields"> Restaurant 2</label>
@@ -41,11 +40,13 @@ const CreateAM = () => {
             <label for="fields"> Restaurant 2</label>
             <input id="fields" type="checkbox" />
             <label for="fields"> Restaurant 2</label>
+            <input id="fields" type="checkbox" />
+
           </div>
         </div>
       </div>
       <div>
-        <input id="areamanager-page-save-button" type="submit" value="Save" />
+        <input id="save-button" type="submit" value="Save" />
       </div>
     </div>
   );
