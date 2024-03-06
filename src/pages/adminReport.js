@@ -144,7 +144,7 @@ const ReportPage = () => {
   };
 
   return (
-    <div className='report-page'>
+    <div className='page-container'>
       <div className="report-title-container">
         <h1 className="report-page-title">Report Management</h1>
         <p className="report-page-description">

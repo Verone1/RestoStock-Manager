@@ -4,7 +4,11 @@ import '../index.css';
 
 const CreateAM = () => {
   return (
-    <div className="areamanager-page-container">
+    <div className="page-container">
+      <h1 className="page-title">Create Area Manager</h1>
+      <p className="page-description">
+        Please fill out the following fields to create your new area manager.
+      </p>
           <div>
             <a>*</a>
             <label>Name:</label>
