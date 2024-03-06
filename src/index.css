@@ -273,6 +273,12 @@ body {
   border-color: #004085;
 }
 
+#page-fields {
+  width: 60%;
+  padding: 1vh;
+  border: #B1D3FB;
+  float: right;
+}
 
 /* || ADMIN REPORT PAGE */
 

@@ -12,23 +12,23 @@ const CreateAM = () => {
           <div>
             <a>*</a>
             <label>Name:</label>
-            <input type="text" id="area-manager-page-fields" placeholder="Enter Name" /><br />
+            <input type="text" id="page-fields" placeholder="Enter Name" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Phone Number:</label>
-            <input type="text" id="area-manager-page-fields" placeholder="Enter Number" /><br />
+            <input type="text" id="page-fields" placeholder="Enter Number" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Budget:</label>
-            <input data-type="currency" id="area-manager-page-fields" placeholder="Enter Budget" /><br />
+            <input data-type="currency" id="page-fields" placeholder="Enter Budget" /><br />
           </div>
           <div>
             <a>*</a>
             <label>Restaurants:</label>
             <div id="areamanager-page-restaurants-list">
-              <div id="area-manager-page-fields">
+              <div id="page-fields">
               <input id="fields" type="checkbox"/>
               <label for="fields"> Restaurant 1</label>
               <input id="fields" type="checkbox"/>
