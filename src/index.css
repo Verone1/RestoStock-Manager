@@ -1,8 +1,6 @@
-
-
-
 /* This is the style of the actual header */
 .header {
+  width: 100%;
   background-color: #016A63;
   /* colour of background*/
   color: white;
@@ -116,14 +114,16 @@
 
 /* || GLOBAL CSS */
 
-html, body {
-  height: auto;
+body,
+html {
   margin: 0;
   padding: 0;
+  background: #E3F8FD;
 }
 
 * {
   box-sizing: border-box;
+
 }
 
 .page-container {
@@ -132,7 +132,6 @@ html, body {
   flex-direction: column;
   align-items: center;
   background: #E3F8FD;
-  min-height: 88vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -562,7 +561,7 @@ tr:hover {
 /* side panel which will allow to select the appropriate contact for the user to message*/
 .messages-contact-container {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 100vh;
+  height: 88vh;
   width: 35%;
   padding: 0% 0% 0% 20%;
   background-color: rgb(228, 248, 253);
@@ -720,8 +719,8 @@ tr:hover {
   display: flex;
 }
 
-.modify-button-container{
-  margin-top: -50px;  
+.modify-button-container {
+  margin-top: -50px;
 }
 
 .modify-input-container {
@@ -903,15 +902,22 @@ tr:hover {
 
 /* Styling of side panel */
 .options {
-  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 15%;
+  height: 775px;
   position: absolute;
+  top: 0;
+  left: 0;
   background-color: #2a2d34;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #ffffff;
   text-align: left;
+  padding-bottom: 20px;
+  margin-top: 136px;
 }
 
 /* Styling of the actual option buttons */
@@ -928,4 +934,12 @@ tr:hover {
 .options a:hover {
   background-color: #353940;
   color: #ffffff;
+}
+
+.welcome-text {
+  margin-top: auto;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
 }
