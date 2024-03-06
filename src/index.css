@@ -767,16 +767,48 @@ tr:hover {
 
 /* Area which the content outside of the header and nav bar will sit in */
 .modify-page-container {
+  background-color: #E3F8FD;
   display: flex;
+}
+
+.modify-input-container {
+  padding: 2% 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: #E3F8FD;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* to be used in each creation field */
+.modify-input-container div {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 90%;
+  padding: 5px;
+  font-size: 18px;
+  /* size of text*/
+  color: black;
+  /* colour of text*/
+  text-align: left;
+  /* centers the text*/
+  overflow-y: auto;
+  /* adds a scroll pane only if neccesary*/
+  border-radius: 5px;
+}
+
+/* required field class creation */
+.modify-input-container a {
+  color: red;
 }
 
 .user {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
   height: 100vh;
-  width: 35%;
-  padding: 0% 0% 0% 10%;
+  width: 20%;
+  padding: 0% 0% 0% 5%;
   margin-left: 10%;
-  background-color: rgb(228, 248, 253);
+  background-color: #373b44;
   /* colour of background*/
   font-family: Arial;
   /* font of text*/
@@ -793,7 +825,7 @@ tr:hover {
   width: 100%;
   text-align: center;
   font-size: x-large;
-  background-color: #B1D3FB;
+  background-color: #505561;
   font-weight: bold;
   color: white;
   /* colour of text*/
@@ -829,45 +861,6 @@ tr:hover {
   /* new colour of background*/
   color: rgb(255, 255, 255);
   /* new colour of text*/
-}
-
-.modify-page-description {
-  height: 84vh;
-  width: 45%;
-  padding-top: 5vh;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  background-color: rgb(250, 250, 250);
-  /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-}
-
-.modify-page-description div {
-  background-color: rgb(199, 232, 253);
-  /* colour of background*/
-  width: 75%;
-  margin-top: 1%;
-  padding: 1vh;
-  font-family: Arial;
-  /* font of text*/
-  font-size: large;
-  /* size of text*/
-  color: black;
-  /* colour of text*/
-  text-align: left;
-  /* centers the text*/
-  overflow-y: auto;
-  /* adds a scroll pane only if neccesary*/
-  border-radius: 4px;
 }
 
 /* CSS of the list of items showing up */

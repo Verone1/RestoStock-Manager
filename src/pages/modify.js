@@ -11,18 +11,18 @@ const Modify = () => {
     const fetchNames = async () => {
       try {
         const response = await fetch('http://localhost:3001/api/table2');
-        
+
         const data = await response.json();
         setNames(data);
       } catch (error) {
-        
+
       }
     };
 
     const fetchRestaurants = async () => {
       try {
         const response = await fetch('http://localhost:3001/api/restaurants');
-        
+
         const data = await response.json();
         setRestaurants(data);
       } catch (error) {
@@ -50,6 +50,7 @@ const Modify = () => {
 
   return (
     <div className="modify-page-container">
+
       <div className="user">
         <div>
           <form onChange={perform}>
@@ -71,13 +72,19 @@ const Modify = () => {
         </ul>
       </div>
 
-      <div className="modify-page-description">
+      <div className="modify-input-container">
+        <div classname="title-container">
+          <h1 className="page-title">Modify User</h1>
+          <p className="page-description">
+            Please select the user you would like to modify from the left hand pane and then follow the options below.
+          </p>
+        </div>
         <div>
           <a>*</a>
           <label>Name:</label>
           <input
             type="text"
-            id="modify-page-fields"
+            id="page-fields"
             placeholder="Enter Name"
             value={selectedContact ? selectedContact.name : ''}
             onChange={(e) => setSelectedContact({ ...selectedContact, name: e.target.value })}
@@ -89,7 +96,7 @@ const Modify = () => {
           <label>Phone Number:</label>
           <input
             type="text"
-            id="modify-page-fields"
+            id="page-fields"
             placeholder="Enter Phone Number"
             value={selectedContact ? selectedContact.phoneNumber : ''}
             onChange={(e) => setSelectedContact({ ...selectedContact, phoneNumber: e.target.value })}
