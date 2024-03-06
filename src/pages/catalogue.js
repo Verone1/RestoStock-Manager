@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'; //imports this file from the directory which is providing the CSS
+import '../index.css'; //imports this file from the directory which is providing the CSS
 import PDQImage from '../assets/PDQ.png'; // Import PDQ image
 import TabletTillImage from '../assets/Tablet till.png'; // Import Tablet Till image
 import bumpbar from "../assets/bumpbar.jpg";
