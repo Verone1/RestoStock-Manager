@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoIosCreate } from "react-icons/io";
 import { MdOutlineCreate } from "react-icons/md";
-import { LuMailbox } from "react-icons/lu";
+import { CiMail } from "react-icons/ci";
+
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
@@ -85,7 +86,7 @@ const Option = ({ onLogout, access }) => {
             Modify User
           </NavLink>
           <NavLink to="/message" className={Message}>
-            <LuMailbox className='iconStyle' />
+            <CiMail className='iconStyle' />
             Mailbox
           </NavLink>
         </>

@@ -159,9 +159,9 @@ const ReportPage = () => {
           <option value="Report 3">Report 3</option>
           <option value="Report 4">Report 4</option>
         </select>
-        <button onClick={generateReport} className='report-generate-button'>Generate Report</button>
+        <button onClick={generateReport} id='save-button'>Generate Report</button>
         {dataReport.length > 0 && (
-          <CSVLink {...csvExtract} className='report-export-button'>Export to CSV</CSVLink>
+          <CSVLink {...csvExtract} id='save-button'>Export to CSV</CSVLink>
         )}
       </div>
       <div className='report-data-container'>
