@@ -598,21 +598,6 @@ tr:hover {
   background-color: #0056b3;
 }
 
-
-
-
-/* || CREATE RESTAURANT PAGE */
-
-/* area which will contain the creation fields */
-
-/* CSS to be used for the field to input data */
-#createres-page-fields {
-  width: 60%;
-  padding: 10px;
-  border: #B1D3FB;
-  float: right;
-}
-
 /* || MESSAGES PAGE */
 
 /* Area which the content outside of the header and nav bar will sit in */
