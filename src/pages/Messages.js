@@ -25,7 +25,7 @@ const Messages = ({ user }) => {
     const fetchNames = async () => {
       try {
         const response = await fetch('http://localhost:3001/api/names');
-        
+
         const data = await response.json();
         setNames(data);
       } catch (error) {
@@ -35,9 +35,9 @@ const Messages = ({ user }) => {
     fetchNames();
   }, []);
 
-  
 
-  
+
+
 
   return (
     <div className="messages-page-container">
@@ -61,18 +61,15 @@ const Messages = ({ user }) => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <button id="messages-send-button" onClick={handleSendClick}>
+        <button id="save-button" onClick={handleSendClick}>
           Send
         </button>
       </div>
-
-        
-        <br />
-      </div>
+    </div>
   );
 }
 
-export default function App({ user}) {
+export default function App({ user }) {
   return (
     <div>
       <Messages user={user} />
