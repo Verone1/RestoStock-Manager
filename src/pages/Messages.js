@@ -54,9 +54,6 @@ const Messages = ({ user }) => {
         {messages.map((message, index) => (
           <div key={index}>{message}</div>
         ))}
-      </div>
-
-      <div className="mesaages-text-container">
         <input
           type="text"
           id="messages-text-box"
@@ -67,9 +64,11 @@ const Messages = ({ user }) => {
         <button id="messages-send-button" onClick={handleSendClick}>
           Send
         </button>
+      </div>
+
+        
         <br />
       </div>
-    </div>
   );
 }
 

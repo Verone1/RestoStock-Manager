@@ -89,7 +89,7 @@ const Option = ({ access, user }) => {
             <CiMail className='iconStyle' />
             Mailbox
           </NavLink>
-          <div className="welcome-text">© 2024 | Restostock Manager. 
+          <div className="welcome-text">© 2024 | RestoStock Manager. 
           You are logged in as {user}
           </div>
         </>
