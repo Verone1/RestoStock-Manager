@@ -871,3 +871,147 @@ tr:hover {
   text-align: center;
   padding: 10px 0;
 }
+
+
+/* Budget Page */ 
+
+
+.budget-title-text
+{
+    font-size: 40px; 
+    color: #070707;
+    font-weight: 400;
+    margin-left: 200px; 
+}
+
+.user-input-body
+{
+    display: flex; 
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: px; 
+    gap: 30px; 
+}
+
+.area-man-body
+{
+    height: 50px; 
+    width: 400px;
+    align-items: center;
+    display: flex; 
+    margin: auto; 
+    border-radius: 5px;
+}
+
+.area-man-label
+{
+    padding: 10px;
+    margin-bottom: 10px; 
+    display: inline-block; 
+}
+
+.month-body
+{
+    height: 50px; 
+    width: 400px;
+    align-items: center;
+    display: flex; 
+    margin: auto; 
+    border-radius: 5px;
+}
+
+.month-label
+{
+    padding: 10px;
+    margin-bottom: 10px; 
+    display: inline-block; 
+}
+
+.year-body
+{
+    height: 50px; 
+    width: 400px;
+    align-items: center;
+    display: flex; 
+    margin: auto; 
+    border-radius: 5px;
+}
+
+.year-label
+{
+    padding: 10px;
+    margin-bottom: 10px; 
+    display: inline-block; 
+}
+
+.month-drop-down
+{
+    margin-left: 54px; 
+}
+
+.year-drop-down
+{
+    margin-left: 67px; 
+
+}
+
+.button-body
+{
+    margin-left: 700px;
+}
+
+button:hover
+{
+
+    background-color: #72be2a;
+}
+
+.month-select,
+button
+{
+    margin-bottom: 14px;
+    padding: 5px; 
+    font-size: 16px; 
+    display: inline-block; 
+}
+
+.area-man-select,
+button
+{
+    margin-bottom: 14px;
+    padding: 5px; 
+    font-size: 16px; 
+    display: inline-block; 
+}
+
+.year-select, 
+button
+{
+    margin-bottom: 14px;
+    padding: 5px; 
+    font-size: 16px; 
+    display: inline-block; 
+}
+
+
+h2 
+{
+    margin-top: 20px; 
+}
+
+pre 
+{
+    margin-top: pre-wrap;
+}
+
+button
+{
+    background-color: #007bff;
+    color: #ffffff;
+    border: none; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    max-width: 100px;
+    width: 100%; 
+    margin-top: 10px; 
+}
