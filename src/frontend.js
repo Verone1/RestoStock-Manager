@@ -1,17 +1,13 @@
 import React from 'react';
 import './index.css';
 import logo from './assets/logo.png';
+
 import { NavLink } from "react-router-dom";
 import { HiDocumentReport } from "react-icons/hi";
-import { IoIosCreate } from "react-icons/io";
-import { MdOutlineCreate } from "react-icons/md";
-import { IoIosMail } from "react-icons/io";
-import { MdInventory } from "react-icons/md";
+import { IoIosCreate, IoIosMail } from "react-icons/io";
+import { MdOutlineCreate, MdInventory, MdRequestPage, MdReportProblem } from "react-icons/md";
 import { FaBoxOpen } from "react-icons/fa6";
-import { MdReportProblem } from "react-icons/md";
-import { MdRequestPage } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
-
 
 import Catalogue from './pages/catalogue';
 import Create from './pages/create';
@@ -21,6 +17,7 @@ import Modify from './pages/modify';
 import AdminReport from './pages/adminReport';
 import DamageReport from './pages/reportDamage';
 import Approval from './pages/approval';
+import Budget from './pages/budget';
 
 
 const Header = ({ onLogout, user }) => {
@@ -58,9 +55,6 @@ const Option = ({ access, user }) => {
             <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
-          <div className="welcome-text">© 2024 | RestoStock Manager.
-            You are logged in as {user}
-          </div>
         </>
       )}
       {access === 'am' && (
@@ -73,17 +67,11 @@ const Option = ({ access, user }) => {
             <HiDocumentReport className='iconStyle' />
             Reports
           </NavLink>
-          <NavLink to="/report" className={AdminReport}>
-            <FaMoneyBillAlt className='iconStyle' />
-            Budget Tracker
-          </NavLink>
+          
           <NavLink to="/message" className={Message}>
           <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
-          <div className="welcome-text">© 2024 | RestoStock Manager.
-            You are logged in as {user}
-          </div>
         </>
       )}
       {access === 'headoffice' && (
@@ -95,6 +83,10 @@ const Option = ({ access, user }) => {
           <NavLink to="/create" className={Create}>
             <IoIosCreate className='iconStyle' />
             Create Restaurant
+          </NavLink>
+          <NavLink to="/budget" className={Budget}>
+            <FaMoneyBillAlt className='iconStyle' />
+            Budget Tracker
           </NavLink>
           <NavLink to="/createam" className={CreateAM}>
             <IoIosCreate className='iconStyle' />
@@ -108,11 +100,12 @@ const Option = ({ access, user }) => {
             <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
-          <div className="welcome-text">© 2024 | RestoStock Manager.
-            You are logged in as {user}
-          </div>
+          
         </>
       )}
+      <div className="welcome-text">© 2024 | RestoStock Manager.
+            You are logged in as {user}
+      </div>
     </div>
   );
 }
@@ -121,7 +114,7 @@ export default function App({ accessLevel, onLogout, user }) {
   return (
     <div>
       <Header onLogout={onLogout} user={user} />
-      <Option access={accessLevel} />
+      <Option access={accessLevel} user={user}/>
     </div>
   );
 }
