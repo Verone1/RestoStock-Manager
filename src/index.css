@@ -875,6 +875,11 @@ tr:hover {
 
 /* Budget Page */ 
 
+.budget-body
+{
+  background-color: rgb(216, 247, 252);
+
+}
 
 .budget-title-text
 {
