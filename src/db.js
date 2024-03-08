@@ -73,4 +73,17 @@ app.put('/api/status', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
+
+app.post('/api/restaurant', async (req, res) => {
+    const { name, phoneNumber, address, ams } = req.body;
+    try {
+      await pool.query(
+        'INSERT INTO restaurant (name, phone_number, address, area_manager) VALUES ($1, $2, $3, $4)',
+        [name, phoneNumber, address, ams]
+      );
+    } catch (error) {
+      console.error('Error executing query', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
   
