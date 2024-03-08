@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react"; 
-import "./my_budget.css"; 
+import "../index.css"; 
 
 const BudgetMod = () =>
 {
