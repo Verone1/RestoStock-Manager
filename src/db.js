@@ -30,6 +30,16 @@ app.get('/api/names', async (req, res) => {
     }
   });
 
+app.get('/api/approval', async (req, res) => {
+    try {
+      const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name, item_cost, item_description FROM approvals WHERE status = 'Pending'");
+      res.json(result.rows);
+    } catch (error) {
+      console.error('Error executing query', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
   app.get('/api/restaurants', async (req, res) => {
     try {
       const result = await pool.query('SELECT username FROM users WHERE access_level = $1', ['restaurant']);
@@ -39,6 +49,15 @@ app.get('/api/names', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
+
+app.put('/api/status', async (req, res) => {
+    const { order_no, status } = req.body;
+    try {
+      await pool.query('UPDATE approvals SET status = $1 WHERE order_no = $2', [status, order_no]);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });  
 
   app.post('/api/am', async (req, res) => {
     const { name, phoneNumber, budget, selectedRestaurants } = req.body;
