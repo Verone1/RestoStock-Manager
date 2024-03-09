@@ -3,6 +3,12 @@ import './index.css';
 import { Link } from 'react-router-dom';
 
 const OrderPopup = ({ onClose }) => {
+
+  useEffect(() => {
+    document.title = 'Item Catalogue | RestoStock Manager';
+  })
+
+
   const itemNames = ["Burger", "Fries", "Drinks"];
 
   return (

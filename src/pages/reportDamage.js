@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../index.css';
 
 const ReportPage = () => {
+
+  useEffect(() => {
+    document.title = 'Report Damage | RestoStock Manager';
+  })
+
   const [item, setItem] = useState('');
   const [description, setDescription] = useState('');
   const [location, setLocation] = useState('');

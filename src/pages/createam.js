@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../index.css';
 
 const CreateAM = () => {
+
+  useEffect(() => {
+    document.title = 'Create Area Manager | RestoStock Manager';
+  })
+
   const [restaurants, setRestaurants] = useState([]);
 
   // a GET request is done to collect the restaurants 
@@ -12,7 +17,7 @@ const CreateAM = () => {
         const data = await response.json();
         setRestaurants(data);
       } catch (error) {
-        console.error( error);
+        console.error(error);
       }
     };
 
@@ -32,7 +37,7 @@ const CreateAM = () => {
         .map((checkbox) => checkbox.value),
     };
 
-    
+
     // prevents invalid format to be submitted
     // more fields required upon testing
     if (formData.budget === '') {
@@ -42,7 +47,7 @@ const CreateAM = () => {
 
     // this reloads the form
     form.target.reset();
-    
+
     try {
       const response = await fetch('http://localhost:3001/api/am', {
         method: 'POST',
@@ -56,12 +61,12 @@ const CreateAM = () => {
       if (!response.ok) {
         form.target.reset();
         alert('please make sure that you have entered details correctly');
-      } 
-      
+      }
+
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-    
+
   };
 
   return (

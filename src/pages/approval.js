@@ -4,7 +4,10 @@ import '../index.css';
 const Approval = () => {
   const [pendingOrders, setPendingOrders] = useState([]);
   const [selectedOrder, setSelectedOrder] = useState(null);
-  
+
+  useEffect(() => {
+    document.title = 'Approve Orders | RestoStock Manager';
+  })
 
   useEffect(() => {
     fetchPendingOrders();
@@ -72,19 +75,19 @@ const Approval = () => {
     handleR();
     setSelectedOrder(null);
     fetchPendingOrders();
-    
+
   };
 
   const handleOrderClick = (order) => {
     setSelectedOrder(order);
   };
 
-  return ( 
+  return (
     <div class="approval-page-container">
       <div class="approval-requests-container">
         <div>Pending Order Requests</div>
-        
-        
+
+
         {pendingOrders.map((order) => (
           <a key={order.order_no} onClick={() => handleOrderClick(order)}>
             {order.site_name} <br />
@@ -104,7 +107,7 @@ const Approval = () => {
             <a>Item Name: {selectedOrder.item_name}</a>
             <a>Item Cost: {selectedOrder.item_cost}</a>
             <a>Item Description: {selectedOrder.item_description}</a>
-            <button class="approval-approve-button" onClick={clickA}> Approve </button> 
+            <button class="approval-approve-button" onClick={clickA}> Approve </button>
             <button class="approval-approve-button" onClick={clickR}>Reject</button>
           </>
         )}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../index.css'; //imports this file from the directory which is providing the CSS
 import PDQImage from '../assets/PDQ.png'; // Import PDQ image
 import TabletTillImage from '../assets/Tablet till.png'; // Import Tablet Till image
@@ -24,6 +24,12 @@ const items = [
 ];
 
 const CatalogPage = () => {
+
+  useEffect(() => {
+    document.title = 'Item Catalogue | RestoStock Manager';
+  })
+
+
   return (
     <div className="catalog-page">
       <div className="inventory-container">

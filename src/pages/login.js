@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 import '../index.css';
 
 const LoginPage = ({ onLogin }) => {
+
+    useEffect(() => {
+        document.title = 'Login | RestoStock Manager';
+      })
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 

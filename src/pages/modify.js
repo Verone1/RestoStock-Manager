@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../index.css';
 
 const Modify = () => {
+
+  useEffect(() => {
+    document.title = 'Modify User | RestoStock Manager';
+  })
+
   const [contact, setContact] = useState('');
   const [names, setNames] = useState([]);
   const [selectedContact, setSelectedContact] = useState(null);

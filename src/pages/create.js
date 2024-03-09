@@ -3,6 +3,11 @@ import '../index.css';
 
 
 const Create = () => {
+
+  useEffect(() => {
+    document.title = 'Create Restaurant | RestoStock Manager';
+  })
+
   const [ams, setAms] = useState([]);
 
   // retreives all Area Managers from DB
@@ -31,7 +36,7 @@ const Create = () => {
       ams: form.target.elements.ams.value,
     };
 
-    
+
     // prevents invalid format to be submitted
     // more fields required upon testing
     if (formData.budget === '') {
@@ -41,7 +46,7 @@ const Create = () => {
 
     // this reloads the form
     form.target.reset();
-    
+
     try {
       const response = await fetch('http://localhost:3001/api/restaurant', {
         method: 'POST',
@@ -55,22 +60,22 @@ const Create = () => {
       if (!response.ok) {
         form.target.reset();
         alert('please make sure that you have entered details correctly');
-      } 
-      
+      }
+
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-    
+
   };
 
 
   return (
     <div className="page-container">
       <div classname="title-container">
-      <h1 className="page-title">Create Restaurant</h1>
-      <p className="page-description">
-        Please fill out the following fields to create your restaurant.
-      </p>
+        <h1 className="page-title">Create Restaurant</h1>
+        <p className="page-description">
+          Please fill out the following fields to create your restaurant.
+        </p>
       </div>
       <form onSubmit={handleSubmit}>
         <div>

@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../index.css';
 
 const Messages = ({ user }) => {
+
+  useEffect(() => {
+    document.title = 'Mailbox | RestoStock Manager';
+  })
+
   const [option, setOption] = useState(null);
   const [inputText, setInputText] = useState('');
   const [messages, setMessages] = useState([]);
