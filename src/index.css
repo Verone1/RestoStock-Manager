@@ -12,14 +12,15 @@
   /*makes sure that all items are aligned inside the header */
   display: flex;
   /* This controls the positioning of elements and ensures that it is kept aligned*/
+  justify-content: center;
 }
 
 
 
 
 .header img {
-  position: relative;
-  left: 25%;
+  width: 40vw;
+  height: auto;
 }
 
 /* Styling for the button on the right of the header */
@@ -134,7 +135,6 @@ html {
   align-items: center;
   background: #E3F8FD;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  flex-grow: 1;
 }
 
 /* div container for title on report page */
@@ -685,7 +685,7 @@ tr:hover {
 
 .user {
   /*width: 40%; /* sets the width of the navigation bar to 20%*/
-  height: 775px;
+  height: 85vh;
   width: 15%;
   margin-left: 15%;
   background-color: #373b44;
@@ -835,8 +835,8 @@ tr:hover {
   flex-direction: column;
   justify-content: flex-start;
   width: 15%;
-  height: 100vh;
-  position: absolute;
+  height: 85vh;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #2a2d34;
@@ -845,6 +845,7 @@ tr:hover {
   font-weight: 300;
   color: #ffffff;
   text-align: left;
+  margin-top: 15vh;
   padding-bottom: 20px;
 }
 
