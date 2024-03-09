@@ -11,6 +11,8 @@ import Report from "./pages/adminReport";
 import Reports from "./pages/reportDamage";
 import Approval from "./pages/approval";
 import Login from "./pages/login";
+import Budget from './pages/budget';
+
 
 
 function App() {
@@ -66,6 +68,7 @@ function App() {
           <Route path="/report" element={<Report user={user} />} />
           <Route path="/reports" element={<Reports user={user} />} />
           <Route path="/approval" element={<Approval user={user} />} />
+          <Route path="/budget" element={<Budget />} />
           <Route
             path="*"
             element={<h1 className="not-found">Page Not Found</h1>}

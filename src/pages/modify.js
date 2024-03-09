@@ -3,14 +3,14 @@ import '../index.css';
 
 const Modify = () => {
   const [contact, setContact] = useState('');
-  const [restaurants, setRestaurants] = useState([]);
   const [names, setNames] = useState([]);
   const [selectedContact, setSelectedContact] = useState(null);
+  const [ams, setAms] = useState([]);
 
   useEffect(() => {
     const fetchNames = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/table2');
+        const response = await fetch('http://localhost:3001/api/restaurants');
 
         const data = await response.json();
         setNames(data);
@@ -19,19 +19,58 @@ const Modify = () => {
       }
     };
 
-    const fetchRestaurants = async () => {
+    const fetchAms = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/restaurants');
-
-        const data = await response.json();
-        setRestaurants(data);
+        const response = await fetch('http://localhost:3001/api/names');
+        const ams = await response.json();
+        setAms(ams);
       } catch (error) {
+        console.error(error);
       }
     };
 
+    fetchAms();
     fetchNames();
-    fetchRestaurants();
   }, []);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // prevents from reloading the page
+    const form = event.target.form;
+     
+    
+    const formData = {
+      name: form.elements.name.value,
+      phoneNumber: form.elements.phoneNumber.value,
+      address: form.elements.address.value,
+      ams: form.elements.ams.value,
+    };
+
+    
+    // this reloads the form
+    form.target.reset();
+    
+    try {
+      const response = await fetch('http://localhost:3001/api/restaurant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // final check that it was submitted
+      if (!response.ok) {
+        form.target.reset();
+        alert('please make sure that you have entered details correctly');
+      } 
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+    
+  };
+
+
 
   function perform(event) {
     event.preventDefault();
@@ -79,58 +118,59 @@ const Modify = () => {
             Please select the user you would like to modify from the left hand pane and then follow the options below.
           </p>
         </div>
-        <div>
-          <a>*</a>
-          <label>Name:</label>
-          <input
-            type="text"
-            id="page-fields"
-            placeholder="Enter Name"
-            value={selectedContact ? selectedContact.name : ''}
-            onChange={(e) => setSelectedContact({ ...selectedContact, name: e.target.value })}
-          />
-          <br />
-        </div>
-        <div>
-          <a>*</a>
-          <label>Phone Number:</label>
-          <input
-            type="text"
-            id="page-fields"
-            placeholder="Enter Phone Number"
-            value={selectedContact ? selectedContact.phoneNumber : ''}
-            onChange={(e) => setSelectedContact({ ...selectedContact, phoneNumber: e.target.value })}
-          />
-          <br />
-        </div>
-        <div>
-          <a>*</a>
-          <label>Budget:</label>
-          <input
-            type="text"
-            id="modify-page-fields"
-            placeholder="Enter Budget"
-            value={selectedContact ? selectedContact.budget : ''}
-            onChange={(e) => setSelectedContact({ ...selectedContact, budget: e.target.value })}
-          />
-          <br />
-        </div>
-        <div>
-          <a>*</a>
-          <label>Restaurants:</label>
-          <div id="modify-page-restaurants-list">
-            {restaurants.map((restaurant) => (
-              <div key={restaurant.id}>
-                <input type="checkbox" id={`restaurant-${restaurant.id}`} />
-                <label htmlFor={`restaurant-${restaurant.id}`}>{restaurant.username}</label>
-              </div>
-            ))}
+        <form>
+          <div>
+            <a>*</a>
+            <label>Name:</label>
+            <input
+              type="text"
+              id="page-fields"
+              placeholder="Enter Name"
+              value={selectedContact ? selectedContact.name : ''}
+              onChange={(e) => setSelectedContact({ ...selectedContact, name: e.target.value })}
+            />
+            <br />
           </div>
-        </div>
-        <div className='modify-button-container'>
-        <input id="save-button" type="submit" value="Save" />
-        <button id="delete-button">Delete Account</button>
-      </div>
+          <div>
+            <a>*</a>
+            <label>Phone Number:</label>
+            <input
+              type="text"
+              id="page-fields"
+              placeholder="Enter Phone Number"
+              value={selectedContact ? selectedContact.phone_number : ''}
+              onChange={(e) => setSelectedContact({ ...selectedContact, phoneNumber: e.target.value })}
+            />
+            <br />
+          </div>
+          <div>
+            <a>*</a>
+            <label>Address:</label>
+            <input
+              type="text"
+              id="modify-page-fields"
+              placeholder="Enter Address"
+              value={selectedContact ? selectedContact.address : ''}
+              onChange={(e) => setSelectedContact({ ...selectedContact, address: e.target.value })}
+            />
+            <br />
+          </div>
+          <div>
+          <a>*</a>
+          <label>Area Manager:</label>
+          <select id="page-fields" name="ams">
+            {ams.map((areaManager) => (
+              <option key={areaManager.username} value={areaManager.username}>
+                {areaManager.username}
+              </option>
+            ))}
+          </select>
+          </div>
+          <div className='modify-button-container'>
+          <button className="approval-approve-button" onClick={(e) => handleSubmit(e)}> Save </button>
+          <button id="delete-button">Delete Account</button>
+          </div>
+        </form>
       </div>
     </div>
   );

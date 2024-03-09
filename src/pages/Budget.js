@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react"; 
-import "./my_budget.css"; 
+import "../index.css"; 
 
 const BudgetMod = () =>
 {
@@ -150,7 +150,7 @@ const BudgetMod = () =>
             
 
             <div className = "button-body">
-            <button clssName = "sub-button" onClick = {submitButtonFunc}> Submit </button>
+            <button className = "sub-button" onClick = {submitButtonFunc}> Submit </button>
                 {budgetInfo && (
                     <div>
                         <h2> Budget Data</h2>

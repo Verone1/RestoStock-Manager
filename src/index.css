@@ -875,6 +875,11 @@ tr:hover {
 
 /* Budget Page */ 
 
+.budget-body
+{
+  background-color: rgb(216, 247, 252);
+
+}
 
 .budget-title-text
 {
@@ -960,7 +965,7 @@ tr:hover {
     margin-left: 700px;
 }
 
-button:hover
+.sub-button:hover
 {
 
     background-color: #72be2a;
