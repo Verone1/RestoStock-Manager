@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSVLink } from 'react-csv';
 import '../index.css';
 
@@ -107,6 +107,10 @@ const fetchData = async (report) => {
 const ReportPage = () => {
   const [reportSelected, setSelectedReport] = useState('');
   const [dataReport, setReportData] = useState([]);
+
+  useEffect(() => {
+    document.title = 'Report Management | RestoStock Manager';
+  })
 
   const reportChange = (event) => {
     setSelectedReport(event.target.value);
