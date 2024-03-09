@@ -67,44 +67,43 @@ const Option = ({ access, user }) => {
             <HiDocumentReport className='iconStyle' />
             Reports
           </NavLink>
-          
+
           <NavLink to="/message" className={Message}>
-          <IoIosMail className='iconStyle' />
+            <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
         </>
       )}
       {access === 'headoffice' && (
         <>
-          <NavLink to="/report" className={AdminReport}>
+          <NavLink to="/report" className={({ isActive }) => isActive ? "options.a AdminReport active-selection" : "options.a AdminReport"}>
             <HiDocumentReport className='iconStyle' />
             Reports
           </NavLink>
-          <NavLink to="/create" className={Create}>
+          <NavLink to="/create" className={({ isActive }) => isActive ? "options.a Create active-selection" : "options.a Create"}>
             <IoIosCreate className='iconStyle' />
             Create Restaurant
           </NavLink>
-          <NavLink to="/budget" className={Budget}>
+          <NavLink to="/budget" className={({ isActive }) => isActive ? "options.a Budget active-selection" : "options.a Budget"}>
             <FaMoneyBillAlt className='iconStyle' />
             Budget Tracker
           </NavLink>
-          <NavLink to="/createam" className={CreateAM}>
+          <NavLink to="/createam" className={({ isActive }) => isActive ? "options.a CreateAM active-selection" : "options.a CreateAM"}>
             <IoIosCreate className='iconStyle' />
             Create Area Manager
           </NavLink>
-          <NavLink to="/modify" className={Modify}>
+          <NavLink to="/modify" className={({ isActive }) => isActive ? "options.a Modify active-selection" : "options.a Modify"}>
             <MdOutlineCreate className='iconStyle' />
             Modify User
           </NavLink>
-          <NavLink to="/message" className={Message}>
+          <NavLink to="/message" className={({ isActive }) => isActive ? "options.a Message active-selection" : "options.a Message"}>
             <IoIosMail className='iconStyle' />
             Mailbox
           </NavLink>
-          
         </>
       )}
       <div className="welcome-text">© 2024 | RestoStock Manager.
-            You are logged in as {user}
+        You are logged in as {user}
       </div>
     </div>
   );
@@ -114,7 +113,7 @@ export default function App({ accessLevel, onLogout, user }) {
   return (
     <div>
       <Header onLogout={onLogout} user={user} />
-      <Option access={accessLevel} user={user}/>
+      <Option access={accessLevel} user={user} />
     </div>
   );
 }
