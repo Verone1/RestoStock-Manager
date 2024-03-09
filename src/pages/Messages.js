@@ -35,10 +35,6 @@ const Messages = ({ user }) => {
     fetchNames();
   }, []);
 
-
-
-
-
   return (
     <div className="messages-page-container">
       <div className="messages-contact-container">

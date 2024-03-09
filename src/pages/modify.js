@@ -167,7 +167,7 @@ const Modify = () => {
           </select>
           </div>
           <div className='modify-button-container'>
-          <button className="approval-approve-button" onClick={(e) => handleSubmit(e)}> Save </button>
+          <button id="save-button" onClick={(e) => handleSubmit(e)}>Save</button>
           <button id="delete-button">Delete Account</button>
           </div>
         </form>

@@ -103,7 +103,7 @@ const Option = ({ access, user }) => {
         </>
       )}
       <div className="welcome-text">© 2024 | RestoStock Manager.
-        You are logged in as {user}
+        You are logged in as <strong>{user}</strong>.
       </div>
     </div>
   );
