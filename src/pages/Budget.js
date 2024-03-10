@@ -75,7 +75,7 @@ const BudgetMod = () => {
         <div className="budget-body">
 
             <div className="page-title">
-                <div className="budget-title-text"> Budget Retrieval</div>
+                <div className="budget-title-text"> Expenditure Retrieval </div>
             </div>
 
 
