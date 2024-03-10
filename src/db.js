@@ -86,4 +86,49 @@ app.post('/api/restaurant', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
+
+
+
+// For inventory page 
+app.get('/api/inventory/:storeID', async (req, res) => 
+    {
+        const storeID = req.params.storeID; 
+
+        try
+        {
+            const result = await poool.query ("SELECT id, product_name, items_left, price_point FROM inventory WHERE store_id = $1", [branch]); 
+
+            const invenInfo = result.rows;
+
+            res.json(invenInfo); 
+        }
+        catch (error)
+        {
+            console.error("Error has occurred retrieving inventory info")
+            res.status(500).json({error: "Internal server error"}); 
+        }
+
+    }); 
+
+// check sql querry 
+// For SPENDING which was previously BUDGET
+app.get('api/spending', async (req, res) =>
+{
+    const {areaManager, month, year} = req.query; 
+
+    try
+    {
+        const result = await pool.query('SELECT * FROM spending_table WHERE area_manager = $1 AND month = $2 AND year =$3', [areaManager, year, month]);
+                
+        // contains the result from the query 
+        res.status(200).json(result.rows); 
+    }
+    catch (error)
+   {
+        console.error("Error occurred executing query", error); 
+        res.status(500).json({error: "Internal Server Error Occurred"})
+    }
+});
+
+    
   
