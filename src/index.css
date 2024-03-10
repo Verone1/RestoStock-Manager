@@ -883,12 +883,12 @@ tr:hover {
 
 /* Budget Page */
 
-.budget-body {
+.expenditure-body {
   background-color: rgb(216, 247, 252);
 
 }
 
-.budget-title-text {
+.expenditure-title-text {
   font-size: 40px;
   color: #070707;
   font-weight: 400;
@@ -999,7 +999,7 @@ pre {
   margin-top: pre-wrap;
 }
 
-button {
+.sub-button {
   background-color: #007bff;
   color: #ffffff;
   border: none;
