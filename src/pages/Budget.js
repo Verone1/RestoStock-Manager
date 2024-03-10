@@ -3,7 +3,7 @@ import "../index.css";
 
 const BudgetMod = () => {
     useEffect(() => {
-        document.title = 'Budget Tracker | RestoStock Manager';
+        document.title = 'Expenditure Tracker | RestoStock Manager';
     })
 
     const [areaManagers, assignAreaManagers] = useState([]);
@@ -72,10 +72,10 @@ const BudgetMod = () => {
 
     return (
         // start div 
-        <div className="budget-body">
+        <div className="expenditure-body">
 
             <div className="page-title">
-                <div className="budget-title-text"> Expenditure Retrieval </div>
+                <div className="expenditure-title-text"> Expenditure Retrieval </div>
             </div>
 
 
