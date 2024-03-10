@@ -112,12 +112,17 @@ app.get('/api/inventory/:storeID', async (req, res) =>
 
 // check sql querry 
 // For SPENDING which was previously BUDGET
+
+// the GET route is defined here for my API which is DB 
+// The endpoint for this is api/spending and this will then listen for it 
 app.get('api/spending', async (req, res) =>
 {
+   // the paramaster called areaMager, month, year is then extracted from this so that they can be used for the querying in to the database
     const {areaManager, month, year} = req.query; 
 
     try
     {
+        
         const result = await pool.query('SELECT * FROM spending_table WHERE area_manager = $1 AND month = $2 AND year =$3', [areaManager, year, month]);
                 
         // contains the result from the query 
