@@ -19,39 +19,55 @@ const ExpenditureModule = () => {
 
 
 
-
+    // automatically called 
+    // useEffect - manages side effect for API - data retrievels with empty depency passed to it ('[]')
     useEffect(() => {
+        // retrieves area manager from API endpoint to insert into drops down 
         const retrieveData = async () => {
             try {
+                /* fetch and assign to variable retrieveResponse from API - are manager list */
                 const retrieveResponse = await fetch("my-api-endpoint/areaManager");
+                // parse the retrieved fetch from aboev as a ajson and assign it to the variable inforcapture
                 const infoCapture = await retrieveResponse.json();
+                // pasrse infoCapture to the function assignAreaManager 
                 assignAreaManagers(infoCapture);
             }
+            // catch error 
             catch (error) {
+                // if something goes wrong while featching, log errror message to the colse 
                 console.error("Error while retrieving area managers", error);
             }
         };
-
+        // calls the retrieveData function 
         retrieveData();
     }, []);
 
-    // can place all the use effect stuff into 1 single useEffect module 
+
+
+// automatically called 
+    // useEffect - manages side effect for API - data retrievels with empty depency passed to it ('[]')
     useEffect(() => {
+        // retrieve years from API endpoint to insert into drop down 
         const retrieveData2 = async () => {
             try {
+                /* fetch and assign to variable retrieveResponse2 from API - years list */
                 const retrieveResponse2 = await fetch("my-api-endpoint/year");
+                // parse the retrieved fetch from aboev as a ajson and assign it to the variable inforcapture
                 const infoCapture = await retrieveResponse2.json();
                 assignYears(infoCapture);
             }
+            // catch error 
             catch (error) {
+             // if something goes wrong while featching, log errror message to the colse 
                 console.error("Errow while retrieving year")
             }
         };
 
+        // calls the retrieveData2 function 
         retrieveData2();
     }, []);
 
-    //
+    
 
     const retrieveExpenditure = async () => {
         try {
@@ -67,6 +83,8 @@ const ExpenditureModule = () => {
 
     };
 
+    // function that calls the function retrieveExpenditure
+    // tied to a button click below 
     const submitButtonFunc = () => {
         retrieveExpenditure();
     }
