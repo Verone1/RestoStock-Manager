@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
 
-const BudgetMod = () => {
+const ExpenditureModule = () => {
     useEffect(() => {
         document.title = 'Expenditure Tracker | RestoStock Manager';
     })
@@ -14,7 +14,7 @@ const BudgetMod = () => {
 
     const [chosenMonth, assignChosenMonth] = useState("");
 
-    const [budgetInfo, assignBudgetInfo] = useState(null);
+    const [expenditureInfo, assignExpenditureInfo] = useState(null);
 
 
 
@@ -51,22 +51,24 @@ const BudgetMod = () => {
         retrieveData2();
     }, []);
 
-    const retrieveBudget = async () => {
+    //
+
+    const retrieveExpenditure = async () => {
         try {
-            const retrieveResponse = await fetch("my-api-endpoint/budget?areaManager=${chosenManager}&month=${chosenMonth"
+            const retrieveResponse = await fetch("my-api-endpoint/expenditure?areaManager=${chosenManager}&month=${chosenMonth"
             );
 
             const infoCapture = await retrieveResponse.json();
-            assignBudgetInfo(infoCapture);
+            assignExpenditureInfo(infoCapture);
         }
         catch (error) {
-            console.error("Error ocurred while retrieveing budget")
+            console.error("Error ocurred while retrieveing expenditure")
         }
 
     };
 
     const submitButtonFunc = () => {
-        retrieveBudget();
+        retrieveExpenditure();
     }
 
 
@@ -142,10 +144,10 @@ const BudgetMod = () => {
 
                 <div className="button-body">
                     <button className="sub-button" onClick={submitButtonFunc}> Submit </button>
-                    {budgetInfo && (
+                    {expenditureInfo && (
                         <div>
-                            <h2> Budget Data</h2>
-                            <pre> {JSON.stringify(budgetInfo, null, 2)}</pre>
+                            <h2> Expenditure Data</h2>
+                            <pre> {JSON.stringify(expenditureInfo, null, 2)}</pre>
                         </div>
                     )}
                 </div>
@@ -164,4 +166,4 @@ const BudgetMod = () => {
     );
 };
 
-export default BudgetMod; 
+export default ExpenditureModule; 
