@@ -124,23 +124,23 @@ const createAllTableRows = () =>
         // to style the page has whole using <div> 
         <div className = "full-container">
             <div className = "title-container">
-                {/* label to display the name of page, title-body unique identifer for styling*/}
+                //label to display the name of page, title-body unique identifer for styling*
                 <label className = "title-body"> Inventory Page</label> 
             </div>
 
-            {/* div to contain and style the part that contians the table for the inventory items*/}
+            // div to contain and style the part that contians the table for the inventory items
             <div className = "inventory-info-container">
-                {/* checks to see if invenInfo actually has data assigned to it and if true renders table*/}
+                // checks to see if invenInfo actually has data assigned to it and if true renders table
                 {invenInfo.length > 0 && (
                     // renders table povided condition is true 
                     <table> 
-                        {/* representation for the table headers */}
+                        // representation for the table headers 
                         <thead>
-                            {/*generates the row for the table that has within it the headers by executing fuction createAllTableHeaders*/}
+                            // generates the row for the table that has within it the headers by executing fuction createAllTableHeaders 
                             <tr>{createAllTableHeaders()}</tr>
                         </thead>
                         
-                            {/* executes function, tables rows generated with data places in respective cells taken from array "ivenInfor" */}
+                            // executes function, tables rows generated with data places in respective cells taken from array "ivenInfor" 
                             {createAllTableRows()}
                        
                     </table>
