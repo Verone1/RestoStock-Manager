@@ -17,7 +17,7 @@ CREATE TABLE user (
 );
 
 CREATE TABLE RestaurantDevices (
-  restaurantID INT,
+  userID INT,
   deviceID INT,
   deviceCount INT
 );
@@ -25,6 +25,7 @@ CREATE TABLE RestaurantDevices (
 CREATE TABLE Restaurants (
   userID INT,
   name VARCHAR(255),
+  phone_number VARCHAR(255),
   address VARCHAR(255),
   AreaManager VARCHAR(255)
 );
@@ -32,21 +33,25 @@ CREATE TABLE Restaurants (
 CREATE TABLE AreaManager (
   userID INT,
   name VARCHAR(255),
+  phone_number VARCHAR(255),
   budget INT,
   number INT
 );
 
 CREATE TABLE Orders (
   userID INT,
+  date TIMESTAMP, 
   deviceID INT,
-  quantity INT
+  quantity INT,
+  reason INT,
 );
 
 CREATE TABLE Faulty (
   userID INT,
   deviceID INT,
   quantity INT,
-  reason TEXT
+  reason TEXT,
+  location TEXT
 );
 
 CREATE TABLE Messages (
