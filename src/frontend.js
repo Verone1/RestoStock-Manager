@@ -17,7 +17,7 @@ import Modify from './pages/modify';
 import AdminReport from './pages/adminReport';
 import DamageReport from './pages/reportDamage';
 import Approval from './pages/approval';
-import Budget from './pages/budget';
+import Expenditure from './pages/ExpenditurePage';
 
 
 const Header = ({ onLogout, user }) => {
@@ -84,7 +84,7 @@ const Option = ({ access, user }) => {
             <IoIosCreate className='iconStyle' />
             Create Restaurant
           </NavLink>
-          <NavLink to="/budget" className={({ isActive }) => isActive ? "options.a Budget active-selection" : "options.a Budget"}>
+          <NavLink to="/expenditure" className={({ isActive }) => isActive ? "options.a Expenditure active-selection" : "options.a Expenditure"}>
             <FaMoneyBillAlt className='iconStyle' />
             Budget Tracker
           </NavLink>
