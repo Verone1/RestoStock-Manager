@@ -1,63 +1,76 @@
 CREATE TABLE login (
-  userID INT,
-  name VARCHAR(255),
-  password VARCHAR(255)
-)
+  userID INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
 
 CREATE TABLE POS (
-  deviceID INT,
-  name VARCHAR(255),
-  cost VARCHAR(255)
+  deviceID INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  cost DECIMAL(10, 2) NOT NULL
 );
 
 CREATE TABLE user (
-  userID INT,
-  name VARCHAR(255),
-  access VARCHAR(255)
+  userID INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  access VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE RestaurantDevices (
   userID INT,
   deviceID INT,
-  deviceCount INT
+  deviceCount INT,
+  price DECIMAL(10, 2),
+  PRIMARY KEY (userID, deviceID),
+  FOREIGN KEY (userID) REFERENCES user(userID),
+  FOREIGN KEY (deviceID) REFERENCES POS(deviceID)
 );
 
 CREATE TABLE Restaurants (
-  userID INT,
-  name VARCHAR(255),
-  phone_number VARCHAR(255),
-  address VARCHAR(255),
-  AreaManager VARCHAR(255)
+  userID INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  AreaManager VARCHAR(255),
+  FOREIGN KEY (userID) REFERENCES user(userID)
 );
 
 CREATE TABLE AreaManager (
-  userID INT,
-  name VARCHAR(255),
-  phone_number VARCHAR(255),
-  budget INT,
-  number INT
+  userID INT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
+  budget INT NOT NULL,
+  number INT NOT NULL
 );
 
 CREATE TABLE Orders (
+  orderID INT PRIMARY KEY AUTO_INCREMENT,
   userID INT,
-  date TIMESTAMP, 
+  date TIMESTAMP,
   deviceID INT,
   quantity INT,
   reason INT,
+  FOREIGN KEY (userID) REFERENCES user(userID),
+  FOREIGN KEY (deviceID) REFERENCES POS(deviceID)
 );
 
 CREATE TABLE Faulty (
+  faultyID INT PRIMARY KEY AUTO_INCREMENT,
   userID INT,
   deviceID INT,
   quantity INT,
   reason TEXT,
-  location TEXT
+  location TEXT,
+  FOREIGN KEY (userID) REFERENCES user(userID),
+  FOREIGN KEY (deviceID) REFERENCES POS(deviceID)
 );
 
 CREATE TABLE Messages (
+  messageID INT PRIMARY KEY AUTO_INCREMENT,
   sendto INT,
   fromuser INT,
   message TEXT,
-  date TIMESTAMP
+  date TIMESTAMP,
+  FOREIGN KEY (sendto) REFERENCES user(userID),
+  FOREIGN KEY (fromuser) REFERENCES user(userID)
 );
-
