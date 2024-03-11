@@ -11,7 +11,7 @@ import Report from "./pages/adminReport";
 import Reports from "./pages/reportDamage";
 import Approval from "./pages/approval";
 import Login from "./pages/login";
-import Budget from './pages/budget';
+import Budget from "./pages/budget"
 
 
 
