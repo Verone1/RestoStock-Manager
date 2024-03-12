@@ -41,8 +41,8 @@ const Modify = () => {
   const handleSubmit = async (event) => {
     event.preventDefault(); // prevents from reloading the page
     const form = event.target.form;
-     
-    
+
+
     const formData = {
       name: form.elements.name.value,
       phoneNumber: form.elements.phoneNumber.value,
@@ -50,10 +50,10 @@ const Modify = () => {
       ams: form.elements.ams.value,
     };
 
-    
+
     // this reloads the form
     form.target.reset();
-    
+
     try {
       const response = await fetch('http://localhost:3001/api/restaurant', {
         method: 'POST',
@@ -67,12 +67,12 @@ const Modify = () => {
       if (!response.ok) {
         form.target.reset();
         alert('please make sure that you have entered details correctly');
-      } 
-      
+      }
+
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-    
+
   };
 
 
@@ -153,7 +153,7 @@ const Modify = () => {
             <label>Address:</label>
             <input
               type="text"
-              id="modify-page-fields"
+              id="page-fields"
               placeholder="Enter Address"
               value={selectedContact ? selectedContact.address : ''}
               onChange={(e) => setSelectedContact({ ...selectedContact, address: e.target.value })}
@@ -161,19 +161,19 @@ const Modify = () => {
             <br />
           </div>
           <div>
-          <a>*</a>
-          <label>Area Manager:</label>
-          <select id="page-fields" name="ams">
-            {ams.map((areaManager) => (
-              <option key={areaManager.username} value={areaManager.username}>
-                {areaManager.username}
-              </option>
-            ))}
-          </select>
+            <a>*</a>
+            <label>Area Manager:</label>
+            <select id="page-fields" name="ams">
+              {ams.map((areaManager) => (
+                <option key={areaManager.username} value={areaManager.username}>
+                  {areaManager.username}
+                </option>
+              ))}
+            </select>
           </div>
           <div className='modify-button-container'>
-          <button id="save-button" onClick={(e) => handleSubmit(e)}>Save</button>
-          <button id="delete-button">Delete Account</button>
+            <button id="save-button" onClick={(e) => handleSubmit(e)}>Save</button>
+            <button id="delete-button">Delete Account</button>
           </div>
         </form>
       </div>
