@@ -18,6 +18,7 @@ import AdminReport from './pages/adminReport';
 import DamageReport from './pages/reportDamage';
 import Approval from './pages/approval';
 import Expenditure from './pages/ExpenditurePage';
+import CreateUser from './pages/createuser';
 
 
 const Header = ({ onLogout, user }) => {
@@ -87,6 +88,10 @@ const Option = ({ access, user }) => {
           <NavLink to="/createam" className={({ isActive }) => isActive ? "options.a CreateAM active-selection" : "options.a CreateAM"}>
             <IoIosCreate className='iconStyle' />
             Create Area Manager
+          </NavLink>
+          <NavLink to="/createuser" className={({ isActive }) => isActive ? "options.a CreateUser active-selection" : "options.a CreateUser"}>
+            <IoIosCreate className='iconStyle' />
+            Create User
           </NavLink>
           <NavLink to="/expenditure" className={({ isActive }) => isActive ? "options.a Expenditure active-selection" : "options.a Expenditure"}>
             <FaMoneyBillAlt className='iconStyle' />

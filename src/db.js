@@ -1,6 +1,7 @@
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 const app = express();
 const port = 3001;
 
@@ -206,4 +207,28 @@ app.get('api/spending', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const userCheck = await pool.query('SELECT * FROM login WHERE username = $1', [username]);
+
+    if (userCheck.rows.length > 0) {
+      const user = userCheck.rows[0];
+
+      if (password === user.password) {
+        res.json({ success: true, message: 'Sucessful' });
+      } else {
+        res.status(401).json({ success: false, message: 'Password does not match' });
+      }
+    } else {
+      res.status(404).json({ success: false, message: 'User not found' });
+    }
+  } catch (error) {
+    console.error('Error', error);
+    res.status(500).json({ error: 'server error' });
+  }
 });

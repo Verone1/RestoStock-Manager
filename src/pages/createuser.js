@@ -50,7 +50,7 @@ const CreateUser = () => {
       form.target.reset();
   
       try {
-        const response = await fetch('http://localhost:3001/api/am', {
+        const response = await fetch('http://localhost:3001/api/createuser', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

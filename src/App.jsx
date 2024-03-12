@@ -13,7 +13,7 @@ import Reports from "./pages/reportDamage";
 import Approval from "./pages/approval";
 import Login from "./pages/login";
 import Expenditure from "./pages/ExpenditurePage"
-
+import CreateUser from "./pages/createuser";
 
 
 function App() {
@@ -29,26 +29,12 @@ function App() {
     navigate("/login");
   }
 
-  const loginCreds = (username, password) => {
-    if (username === "canterbury" && password === "password") { // temp creds
+  const loginCreds = (username, success) => {
+    if(success) {
       setLoggedInState(true);
-      setAccessLevel('restaurant');
       setUser(username);
-      navigate("/");
-    }
-    else if (username === "verone" && password === "password") { // temp creds
-      setLoggedInState(true);
-      setAccessLevel('am');
-      setUser(username);
-      navigate("/approval");
-    }
-    else if (username === "admin" && password === "password") { // temp creds
-      setLoggedInState(true);
       setAccessLevel('headoffice');
-      setUser(username);
-      navigate("/report");
-    } else {
-      alert("Invalid credentials");
+      navigate('/report');
     }
   };
 
@@ -71,6 +57,7 @@ function App() {
           <Route path="/approval" element={<Approval user={user} />} />
           <Route path="/expenditure" element={<Expenditure />} />
           <Route path="/modifyR" element={<ModifyR />} />
+          <Route path="/createuser" element={<CreateUser />} />
           <Route
             path="*"
             element={<h1 className="not-found">Page Not Found</h1>}
