@@ -65,7 +65,7 @@ function App() {
           <Route path="/createam" element={<CreateAM />} />
           <Route path="/message" element={<Message user={user} />} />
           <Route path="/modify" element={<Modify />} />
-          <Route path="/report" element={<Report user={user} />} />
+          <Route path="/report" element={<Report user={user} accessLevel={accessLevel}/>} />
           <Route path="/reports" element={<Reports user={user} />} />
           <Route path="/approval" element={<Approval user={user} />} />
           <Route path="/expenditure" element={<Expenditure />} />

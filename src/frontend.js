@@ -63,7 +63,7 @@ const Option = ({ access, user }) => {
             <MdRequestPage className='iconStyle' />
             POS request Orders
           </NavLink>
-          <NavLink to="/reports" className={DamageReport}>
+          <NavLink to="/report" className={AdminReport}>
             <HiDocumentReport className='iconStyle' />
             Reports
           </NavLink>
