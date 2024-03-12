@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
 
-const Modify = () => {
+const ModifyR = () => {
 
   useEffect(() => {
     document.title = 'Modify Restaurant | RestoStock Manager';
@@ -46,7 +46,7 @@ const Modify = () => {
     const formData = {
       name: form.elements.name.value,
       phoneNumber: form.elements.phoneNumber.value,
-      address: form.elements.address.value,
+      budget: form.elements.address.value,
       restaurants: form.elements.ams.value,
     };
 
@@ -150,12 +150,12 @@ const Modify = () => {
           </div>
           <div>
             <a>*</a>
-            <label>Address:</label>
+            <label>Budget:</label>
             <input
               type="text"
               id="modify-page-fields"
               placeholder="Enter Address"
-              value={selectedContact ? selectedContact.address : ''}
+              value={selectedContact ? selectedContact.budget : ''}
               onChange={(e) => setSelectedContact({ ...selectedContact, address: e.target.value })}
             />
             <br />
@@ -165,14 +165,14 @@ const Modify = () => {
           <label>Restaurants:</label>
           <div id="restaurants">
             <div id="page-fields">
-              {restaurants.map((restaurant) => (
-                <div key={restaurant.username}>
+              {restos.map((restaurant) => (
+                <div key={restaurant.name}>
                   <input
                     type="checkbox"
                     name="restaurant"
-                    value={restaurant.username}
+                    value={restaurant.name}
                   />
-                  <label>{restaurant.username}</label>
+                  <label>{restaurant.name}</label>
                 </div>
               ))}
             </div>
@@ -189,4 +189,4 @@ const Modify = () => {
   );
 };
 
-export default Modify;
+export default ModifyR;
