@@ -79,25 +79,25 @@ const CreateAM = () => {
       </div>
       <form onSubmit={handleSubmit} >
         <div>
-          <span>*</span>
+          <a>*</a>
           <label>Name:</label>
           <input type="text" id="page-fields" name="name" placeholder="Enter Name" />
           <br />
         </div>
         <div>
-          <span>*</span>
+          <a>*</a>
           <label>Phone Number:</label>
           <input type="text" id="page-fields" name="phoneNumber" placeholder="Enter Number" />
           <br />
         </div>
         <div>
-          <span>*</span>
+          <a>*</a>
           <label>Budget:</label>
           <input type="text" id="page-fields" name="budget" placeholder="Enter Budget" />
           <br />
         </div>
         <div>
-          <span>*</span>
+          <a>*</a>
           <label>Restaurants:</label>
           <div id="restaurants">
             <div id="page-fields">
