@@ -44,7 +44,7 @@ const ExpenditureModule = () => {
 
 
 
-// automatically called 
+    // automatically called 
     // useEffect - manages side effect for API - data retrievels with empty depency passed to it ('[]')
     useEffect(() => {
         // retrieve years from API endpoint to insert into drop down 
@@ -58,7 +58,7 @@ const ExpenditureModule = () => {
             }
             // catch error 
             catch (error) {
-             // if something goes wrong while featching, log errror message to the colse 
+                // if something goes wrong while featching, log errror message to the colse 
                 console.error("Errow while retrieving year")
             }
         };
@@ -67,7 +67,7 @@ const ExpenditureModule = () => {
         retrieveData2();
     }, []);
 
-    
+
 
     const retrieveExpenditure = async () => {
         try {
@@ -92,95 +92,64 @@ const ExpenditureModule = () => {
 
     return (
         // start div 
-        <div className="expenditure-body">
-
-            <div className="page-title">
-                <div className="expenditure-title-text"> Expenditure Retrieval </div>
+        <div className="page-container">
+            <div classname="title-container">
+                <h1 className="page-title">Expenditure Retrieval</h1>
+                <p className="page-description">add text here</p>
             </div>
-
-
-            <div className="user-input-body">
-
-
-                <div className="area-man-body">
+            <form>
+                <div>
                     <label className="area-man-label" htmlFor="areaManager"> Area Manager: </label>
-
                     <select className="area-man-select" id="areaManager" value={chosenManager} onChange={(e) => assignChosenManager(e.target.value)}>
-
                         <option value=" "> Area Manager</option>
                         {areaManagers.map((manager) => (
                             <option key={manager.id} value={manager.name}>
                                 {manager.name}
                             </option>
                         ))}
-
                     </select>
                 </div>
 
 
-
-                <div className="month-body">
+                <div>
                     <label className="month-label " htmlFor="monthDropdown"> Month: </label>
-
-                    <div className="month-drop-down">
-                        <select className="month-select" id="monthDropdown" value={chosenMonth} onChange={(e) => assignChosenMonth(e.target.value)}>
-                            <option value=""> Month</option>
-                            {[
-                                "Jan", "Feb", "March", "April", "May", "June",
-                                "July", "Aug", "Sept", "Oct", "Dec"
-                            ].map((month, index) => (
-                                <option key={index} value={month}>
-                                    {month}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-
-
+                    <select className="month-select" id="monthDropdown" value={chosenMonth} onChange={(e) => assignChosenMonth(e.target.value)}>
+                        <option value=""> Month</option>
+                        {[
+                            "Jan", "Feb", "March", "April", "May", "June",
+                            "July", "Aug", "Sept", "Oct", "Dec"
+                        ].map((month, index) => (
+                            <option key={index} value={month}>
+                                {month}
+                            </option>
+                        ))}
+                    </select>
                 </div>
 
-
-                <div className="year-body">
+                <div>
                     <label className="year-label" htmlFor="year"> Year:</label>
+                    <select className="year-select" id="year" value={chosenYear} onChange={(e) => assignChosenYear(e.target.value)}>
+                        <option value=""> Year </option>
+                        {years.map((year) => (
+                            <option key={year.id} value={year.name}>
+                                {year.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            </form>
 
 
-                    <div className="year-drop-down">
-                        <select className="year-select" id="year" value={chosenYear} onChange={(e) => assignChosenYear(e.target.value)}>
-                            <option value=""> Year </option>
-                            {years.map((year) => (
-                                <option key={year.id} value={year.name}>
-                                    {year.name}
-                                </option>
-                            ))}
-                        </select>
+            <div>
+                <button id="save-button" onClick={submitButtonFunc}> Submit </button>
+                {expenditureInfo && (
+                    <div>
+                        <h2> Expenditure Data</h2>
+                        <pre> {JSON.stringify(expenditureInfo, null, 2)}</pre>
                     </div>
-
-
-
-                </div>
-
-
-                <div className="button-body">
-                    <button className="sub-button" onClick={submitButtonFunc}> Submit </button>
-                    {expenditureInfo && (
-                        <div>
-                            <h2> Expenditure Data</h2>
-                            <pre> {JSON.stringify(expenditureInfo, null, 2)}</pre>
-                        </div>
-                    )}
-                </div>
-
-
-
-
-
+                )}
             </div>
-
-        </div> // end div
-
-
-
-
+        </div>
     );
 };
 
