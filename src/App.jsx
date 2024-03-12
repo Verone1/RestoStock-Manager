@@ -7,6 +7,7 @@ import Create from "./pages/create";
 import Message from "./pages/Messages"
 import CreateAM from "./pages/createam";
 import Modify from "./pages/modify";
+import ModifyR from "./pages/modifyR";
 import Report from "./pages/adminReport";
 import Reports from "./pages/reportDamage";
 import Approval from "./pages/approval";
@@ -45,7 +46,7 @@ function App() {
       setLoggedInState(true);
       setAccessLevel('headoffice');
       setUser(username);
-      navigate("/reports");
+      navigate("/report");
     } else {
       alert("Invalid credentials");
     }
@@ -69,6 +70,7 @@ function App() {
           <Route path="/reports" element={<Reports user={user} />} />
           <Route path="/approval" element={<Approval user={user} />} />
           <Route path="/expenditure" element={<Expenditure />} />
+          <Route path="/modifyR" element={<ModifyR />} />
           <Route
             path="*"
             element={<h1 className="not-found">Page Not Found</h1>}

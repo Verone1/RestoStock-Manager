@@ -84,17 +84,21 @@ const Option = ({ access, user }) => {
             <IoIosCreate className='iconStyle' />
             Create Restaurant
           </NavLink>
-          <NavLink to="/expenditure" className={({ isActive }) => isActive ? "options.a Expenditure active-selection" : "options.a Expenditure"}>
-            <FaMoneyBillAlt className='iconStyle' />
-            Budget Tracker
-          </NavLink>
           <NavLink to="/createam" className={({ isActive }) => isActive ? "options.a CreateAM active-selection" : "options.a CreateAM"}>
             <IoIosCreate className='iconStyle' />
             Create Area Manager
           </NavLink>
+          <NavLink to="/expenditure" className={({ isActive }) => isActive ? "options.a Expenditure active-selection" : "options.a Expenditure"}>
+            <FaMoneyBillAlt className='iconStyle' />
+            Budget Tracker
+          </NavLink>
           <NavLink to="/modify" className={({ isActive }) => isActive ? "options.a Modify active-selection" : "options.a Modify"}>
             <MdOutlineCreate className='iconStyle' />
-            Modify User
+            Modify Restaurant
+          </NavLink>
+          <NavLink to="/modifyR" className={({ isActive }) => isActive ? "options.a ModifyR active-selection" : "options.a ModifyR"}>
+            <MdOutlineCreate className='iconStyle' />
+            Modify Area Manager
           </NavLink>
           <NavLink to="/message" className={({ isActive }) => isActive ? "options.a Message active-selection" : "options.a Message"}>
             <IoIosMail className='iconStyle' />
