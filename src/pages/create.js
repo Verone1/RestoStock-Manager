@@ -14,7 +14,7 @@ const Create = () => {
   useEffect(() => {
     const fetchAms = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/restaurants');
+        const response = await fetch('http://localhost:3001/api/ams');
         const data = await response.json();
         setAms(data);
       } catch (error) {
@@ -48,8 +48,8 @@ const Create = () => {
     form.target.reset();
 
     try {
-      const response = await fetch('http://localhost:3001/api/restaurant', {
-        method: 'POST',
+      const response = await fetch('http://localhost:3001/api/modify', {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -98,8 +98,8 @@ const Create = () => {
           <label>Area Manager:</label>
           <select id="page-fields" name="ams">
             {ams.map((areaManager) => (
-              <option key={areaManager.username} value={areaManager.username}>
-                {areaManager.username}
+              <option key={areaManager.name} value={areaManager.name}>
+                {areaManager.name}
               </option>
             ))}
           </select>
