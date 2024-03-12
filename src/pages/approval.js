@@ -90,7 +90,7 @@ const Approval = () => {
 
         {pendingOrders.map((order) => (
           <a key={order.order_no} onClick={() => handleOrderClick(order)}>
-            {order.site_name} <br />
+            <strong>{order.site_name}</strong><br />
             Order #{order.order_no}
           </a>
         ))}
