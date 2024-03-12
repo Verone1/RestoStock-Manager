@@ -44,7 +44,7 @@ const CreateAM = () => {
       alert('Budget cannot be empty');
       return;
     }
-
+    
     // this reloads the form
     form.target.reset();
 
@@ -102,13 +102,13 @@ const CreateAM = () => {
           <div id="restaurants">
             <div id="page-fields">
               {restaurants.map((restaurant) => (
-                <div key={restaurant.username}>
+                <div key={restaurant.name}>
                   <input
                     type="checkbox"
                     name="restaurant"
-                    value={restaurant.username}
+                    value={restaurant.name}
                   />
-                  <label>{restaurant.username}</label>
+                  <label>{restaurant.name}</label>
                 </div>
               ))}
             </div>
