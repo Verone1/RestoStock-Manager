@@ -83,7 +83,7 @@ const Approval = () => {
   };
 
   return (
-    <div class="approval-page-container">
+    <div class="modify-page-container">
       <div class="approval-requests-container">
         <div>Pending Order Requests</div>
 
@@ -95,22 +95,33 @@ const Approval = () => {
           </a>
         ))}
       </div>
-      <div class="approval-order_text">
-        {selectedOrder && (
-          <>
-            <a><strong>Order Details:</strong></a>
-            <a>Site Name: {selectedOrder.site_name}</a>
-            <a>Request Date: {selectedOrder.request_date}</a>
-            <a>Current Item Quantity: {selectedOrder.current_item_quantity}</a>
-            <a>Requested Item Quantity: {selectedOrder.requested_item_quantity}</a>
-            <a>Reason for Request: {selectedOrder.reason_for_request}</a>
-            <a>Item Name: {selectedOrder.item_name}</a>
-            <a>Item Cost: {selectedOrder.item_cost}</a>
-            <a>Item Description: {selectedOrder.item_description}</a>
-            <button class="approval-approve-button" onClick={clickA}> Approve </button>
-            <button class="approval-approve-button" onClick={clickR}>Reject</button>
-          </>
-        )}
+      <div class="modify-input-container">
+        <div classname="title-container">
+          <h1 className="page-title">Pending Order Requests</h1>
+          <p className="page-description">
+            Please approve/reject the requests recieved from the restaurants below
+          </p>
+        </div>
+        <div>
+          {selectedOrder && (
+            <>
+              <strong>Order Details:</strong>
+              <br></br>
+              <br></br><strong>Site Name:</strong> {selectedOrder.site_name}
+              <br></br><strong>Request Date:</strong> {selectedOrder.request_date}
+              <br></br><strong>Current Item Quantity:</strong> {selectedOrder.current_item_quantity}
+              <br></br><strong>Requested Item Quantity:</strong> {selectedOrder.requested_item_quantity}
+              <br></br><strong>Reason for Request:</strong> {selectedOrder.reason_for_request}
+              <br></br><strong>Item Name:</strong> {selectedOrder.item_name}
+              <br></br><strong>Item Cost:</strong> {selectedOrder.item_cost}
+              <br></br><strong>Item Description:</strong> {selectedOrder.item_description}
+              <div className='modify-button-container'>
+                <button id="save-button" onClick={clickA}> Approve </button>
+                <button id="delete-button" onClick={clickR}>Reject</button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
