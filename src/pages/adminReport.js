@@ -112,19 +112,17 @@ const ReportPage = ({ access }) => {
         {access === 'am' && (
           <select value={reportSelected} onChange={reportChange} className='report-selection-dropdown'>
             <option value="">Select a report</option>
-            <option value="Report 1">Inventory Report</option>
-            <option value="Report 2">Report 2</option>
-            <option value="Report 3">Report 3</option>
-            <option value="Report 4">Report 4</option>
+            <option value="amreport1">Inventory Report</option>
+            <option value="amreport2">Report 2</option>
+            <option value="amreport3">Report 3</option>
           </select>
         )}
         {access === 'headoffice' && (
           <select value={reportSelected} onChange={reportChange} className='report-selection-dropdown'>
             <option value="">Select a report</option>
-            <option value="Report 1">Inventory Report</option>
-            <option value="Report 2">Report 2</option>
-            <option value="Report 3">Report 3</option>
-            <option value="Report 4">Report 4</option>
+            <option value="horeport1">Inventory Report</option>
+            <option value="horeport2">Report 2</option>
+            <option value="horeport3">Report 3</option>
           </select>
         )}
         <button onClick={generateReport} id='save-button'>Generate Report</button>
