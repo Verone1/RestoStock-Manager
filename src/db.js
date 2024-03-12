@@ -30,6 +30,16 @@ app.get('/api/names', async (req, res) => {
   }
 });
 
+app.get('/api/ams', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM am');
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 app.get('/api/approval', async (req, res) => {
   try {
     const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name, item_cost, item_description FROM approvals WHERE status = 'Pending'");
@@ -52,7 +62,7 @@ app.get('/api/adminreport', async (req, res) => {
 
 app.get('/api/restaurants', async (req, res) => {
   try {
-    const result = await pool.query('SELECT username FROM users WHERE access_level = $1', ['restaurant']);
+    const result = await pool.query('SELECT * FROM restaurant');
     res.json(result.rows);
   } catch (error) {
     console.error('Error executing query', error);
