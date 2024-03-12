@@ -50,7 +50,9 @@ app.get('/api/approval', async (req, res) => {
   }
 });
 
-app.get('/api/adminreport', async (req, res) => {
+// || Area Manager Reports
+
+app.get('/api/amreport1', async (req, res) => {
   try {
     const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
     res.json(result.rows);
@@ -59,6 +61,59 @@ app.get('/api/adminreport', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+app.get('/api/amreport2', async (req, res) => {
+  try {
+    const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/api/amreport3', async (req, res) => {
+  try {
+    const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// || Head Office Reports
+
+app.get('/api/horeport1', async (req, res) => {
+  try {
+    const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/api/horeport2', async (req, res) => {
+  try {
+    const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/api/horeport3', async (req, res) => {
+  try {
+    const result = await pool.query("SELECT order_no, site_name, request_date, current_item_quantity, requested_item_quantity, reason_for_request, item_name FROM approvals");
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Error executing query', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 app.get('/api/restaurants', async (req, res) => {
   try {

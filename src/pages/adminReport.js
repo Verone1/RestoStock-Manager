@@ -5,20 +5,54 @@ import '../index.css';
 
 const fetchData = async (report) => {
   switch (report) {
-    case "Report 1": // Inventory Report 
+    case "amreport1":
       try {
-        const response = await fetch('http://localhost:3001/api/adminreport');
+        const response = await fetch('http://localhost:3001/api/amreport1');
         const data = await response.json();
         return data;
       } catch (error) {
         console.error('Error fetching pending orders:', error);
       }
-    case "Report 2": // Orders Report
-      return
-    case "Report 3": // Sales Report
-      return
-    case "Report 4": // Customer Feedback Report
-      return
+    case "amreport2":
+      try {
+        const response = await fetch('http://localhost:3001/api/amreport2');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching pending orders:', error);
+      }
+    case "amreport3":
+      try {
+        const response = await fetch('http://localhost:3001/api/amreport3');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching pending orders:', error);
+      }
+    case "horeport1":
+      try {
+        const response = await fetch('http://localhost:3001/api/horeport1');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching pending orders:', error);
+      }
+    case "horeport2":
+      try {
+        const response = await fetch('http://localhost:3001/api/horeport2');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching pending orders:', error);
+      }
+    case "horeport3":
+      try {
+        const response = await fetch('http://localhost:3001/api/horeport3');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching pending orders:', error);
+      }
     default:
       return [];
   }
