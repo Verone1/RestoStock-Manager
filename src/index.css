@@ -5,9 +5,7 @@
   background-color: #016A63;
   /* colour of background*/
   color: white;
-  /* colour of text*/
-  font-family: Arial;
-  /* font of text*/
+  /* colour of text*/  
   align-items: center;
   /*makes sure that all items are aligned inside the header */
   display: flex;
@@ -188,7 +186,6 @@ html {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(224, 67, 67);
   color: #ffffff;
   border-color: #007bff;
@@ -209,7 +206,6 @@ html {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   background-color: #007bff;
   color: #ffffff;
@@ -549,8 +545,6 @@ tr:hover {
   margin-left: 15%;
   background-color: #373b44;
   /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
   font-size: large;
   /* size of text*/
   color: black;
@@ -584,7 +578,6 @@ tr:hover {
   /* size of each section*/
   border: 0ch;
   font-size: large;
-  font-family: Arial;
   text-decoration: none;
   /* removes any hyperlinks on the text*/
   display: block;
@@ -688,8 +681,6 @@ tr:hover {
   margin-left: 15%;
   background-color: #373b44;
   /* colour of background*/
-  font-family: Arial;
-  /* font of text*/
   font-size: large;
   /* size of text*/
   color: black;
